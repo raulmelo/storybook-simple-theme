@@ -1,0 +1,251 @@
+.bt {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: transparent;
+  border: 0px solid transparent;
+  outline: none;
+  box-shadow: inset 0px 0px 0px rgba(82, 82, 82, 0.4);
+  transition: all 300ms ease;
+  border-radius: 5px;
+  &:not(:disabled):not(.bt-outline):hover:not(.nohover) {
+    box-shadow: inset 10px 10px 100px rgba(82, 82, 82, 0.12), inset 10px 10px 100px rgba(82, 82, 82, 0.12), 0px 8px 20px rgba(55, 55, 55, 0.18);
+    transform: scale(1.04);
+  }
+  &:disabled {
+    opacity: 0.7;
+  }
+}
+a.bt:hover,
+a.bt {
+  text-decoration: none;
+}
+
+// colors
+
+.bt.bg-white {
+  color: var(--secondary);
+}
+.bt.bg-gray {
+  color: white;
+}
+
+// Size
+.bt-xs {
+  width: max-content;
+  min-width: 50px;
+  min-height: 20px;
+  padding-left: 4px;
+  padding-right: 4px;
+  font-size: 10px;
+  &.loading::after {
+    font-size: 11px;
+  }
+}
+.bt-sm {
+  width: max-content;
+  min-width: 80px;
+  min-height: 25px;
+  padding-left: 9px;
+  padding-right: 9px;
+  font-size: 12px;
+  &.loading::after {
+    font-size: 12px;
+  }
+}
+.bt-md {
+  width: max-content;
+  min-width: 128px;
+  min-height: 40px;
+  font-size: 18px;
+  font-weight: 500;
+  padding-left: 10px;
+  padding-right: 10px;
+  &.loading::after {
+    font-size: 18px;
+  }
+}
+
+.bt-lg {
+  width: max-content;
+  min-width: 256px;
+  min-height: 60px;
+  font-size: 22px;
+  font-weight: 700;
+  &.loading::after {
+    font-size: 22px;
+  }
+}
+
+// radius
+.bt-radius {
+  border-radius: 25px;
+  &.bt-lg {
+    border-radius: 50px;
+  }
+}
+
+// Outline
+.bt.bt-outline {
+  border: 1px solid currentColor;
+  background-color: transparent;
+  &:hover {
+    border: 1px solid transparent;
+    box-shadow: 0px 2px 20px 0px #d0d0d0
+  }
+  &.bg-primary {
+    color: var(--primary);
+    &:hover {
+      box-shadow: 0px 3px 10px var(--primary-light);
+      background-color: var(--primary);
+      color: white;
+    }
+  }
+  &.bg-secondary {
+    color: var(--secondary);
+    &:hover {
+      box-shadow: 0px 3px 10px var(--secondary-light);
+      background-color: var(--secondary);
+      color: white;
+    }
+  }
+  &.bg-third {
+    color: var(--tertiary);
+    &:hover {
+      box-shadow: 0px 3px 10px var(--tertiary-light);
+      background-color: var(--tertiary);
+      color: white;
+    }
+  }
+  &.bg-gray {
+    color: var(--neutral-500);
+    &:hover {
+      box-shadow: 0px 3px 10px var(--neutral-400);
+      background-color: var(--neutral-400);
+      color: white;
+    }
+  }
+  &.bg-gray-400 {
+    color: var(--neutral-400);
+    &:hover {
+      box-shadow: 0px 3px 10px var(--neutral-300);
+      background-color: var(--neutral-300);
+      color: white;
+    }
+  }
+  &.bg-gray-300 {
+    color: var(--neutral-300);
+    &:hover {
+      box-shadow: 0px 3px 10px var(--neutral-200);
+      background-color: var(--neutral-300);
+      color: white;
+    }
+  }
+}
+
+.bt-icon {
+  position: relative;
+  padding-left: 27px;
+  padding-right: 10px;
+  i {
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+  }
+  &.bt-xs {
+    i {
+      left: 8px;
+    }
+  }
+  &.bt-sm {
+    i {
+      left: 10px;
+    }
+  }
+  &.bt-md {
+    padding-left: 40px;
+    padding-right: 20px;
+    i {
+      left: 15px;
+    }
+  }
+  &.bt-lg {
+    i {
+      left: 20px;
+    }
+  }
+}
+
+.bt-circle {
+  border-radius: 50%;
+  cursor: pointer;
+  &.bt-sm {
+    width: 24px;
+    height: 24px;
+    min-height: auto;
+    min-width: auto;
+    font-size: 11px;
+  }
+  &.bt-md {
+    width: 45px;
+    height: 45px;
+    min-height: auto;
+    min-width: auto;
+    font-size: 13px;
+  }
+  &.bt-lg {
+    width: 65px;
+    height: 65px;
+    min-height: auto;
+    min-width: auto;
+    font-size: 16px;
+  }
+}
+
+.bt.loading {
+  pointer-events: none;
+  cursor: none;
+  position: relative;
+  overflow: hidden;
+  font-size: 0px;
+  &:after,
+  &:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+  }
+  &::after {
+    content: "Aguarde";
+    position: absolute;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &:before {
+    content: "";
+    background-color: rgba(33, 29, 29, 0.15);
+    animation: loadingButton 2s ease infinite;
+    z-index: 22;
+    @keyframes loadingButton {
+      to {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.bt-label {
+  &.bt-sm {
+    padding: 4px 24px;
+  }
+  &.bt-md {
+    padding: 8px 30px;
+  }
+  &.bt-lg {
+    padding: 8px 30px;
+  }
+}

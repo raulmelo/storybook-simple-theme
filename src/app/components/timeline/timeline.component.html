@@ -1,0 +1,22 @@
+<div class="timeline-container">
+  <div class="timeline-container-item" *ngFor="let item of data">
+    <div class="timeline-container-item-line">
+      <div class="timeline-container-item-line-content"></div>
+    </div>
+    <div class="timeline-container-item-content">
+      <div class="timeline-container-item-content-header">
+        <div class="timeline-container-item-content-header-dot" [ngStyle]="{ backgroundColor: item?.color }"></div>
+        <p>{{ item?.message }}</p>
+        <br>
+        <span>
+          {{item?.extra}}
+        </span>
+      </div>
+      <div class="timeline-container-item-content-links" *ngIf="item?.links">
+        <div class="timeline-container-item-content-links-item" *ngFor="let link of item?.links">
+          <a (click)="link?.event(item)">{{ link?.title }} »</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

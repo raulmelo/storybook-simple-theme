@@ -1,0 +1,1640 @@
+{
+    "pipes": [],
+    "interfaces": [
+        {
+            "name": "ITimelineInterface",
+            "id": "interface-ITimelineInterface-3b33b0ae073145f3da1603ae4b753000598f985d441e59a627522933aed80597f34f7893566e6e922697381ca81e339665da90f6c3e76847b03dd295eb2f731e",
+            "file": "src/app/components/timeline/timeline.component.ts",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "type": "interface",
+            "sourceCode": "import { Component, Input, OnInit } from '@angular/core';\r\n\r\nexport interface ITimelineInterfaceLink {\r\n  title: string;\r\n  event?: Function;\r\n}\r\n\r\nexport interface ITimelineInterface {\r\n  message: string;\r\n  extra: string;\r\n  status?: string;\r\n  links?: ITimelineInterfaceLink[];\r\n}\r\n\r\n@Component({\r\n  selector: 'app-custom-timeline',\r\n  templateUrl: './timeline.component.html',\r\n  styleUrls: ['./timeline.component.scss'],\r\n})\r\nexport class CustomTimelineComponent implements OnInit {\r\n  /* data: Array de objetos que representam os eventos do timeline*/\r\n  @Input() data: ITimelineInterface[] = [];\r\n\r\n  constructor() {}\r\n\r\n  /*\r\n  * Método que inicializa os dados do componente\r\n  */\r\n  ngOnInit(): void {}\r\n\r\n\r\n  /*\r\n  * Pegar data formatada\r\n  */\r\n  getDate(date: Date): string {\r\n    return date.toLocaleDateString('pt-BR');\r\n  }\r\n}\r\n",
+            "properties": [
+                {
+                    "name": "extra",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 10
+                },
+                {
+                    "name": "links",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "ITimelineInterfaceLink[]",
+                    "optional": true,
+                    "description": "",
+                    "line": 12
+                },
+                {
+                    "name": "message",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 9
+                },
+                {
+                    "name": "status",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": true,
+                    "description": "",
+                    "line": 11
+                }
+            ],
+            "indexSignatures": [],
+            "kind": 165,
+            "methods": []
+        },
+        {
+            "name": "ITimelineInterfaceLink",
+            "id": "interface-ITimelineInterfaceLink-3b33b0ae073145f3da1603ae4b753000598f985d441e59a627522933aed80597f34f7893566e6e922697381ca81e339665da90f6c3e76847b03dd295eb2f731e",
+            "file": "src/app/components/timeline/timeline.component.ts",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "type": "interface",
+            "sourceCode": "import { Component, Input, OnInit } from '@angular/core';\r\n\r\nexport interface ITimelineInterfaceLink {\r\n  title: string;\r\n  event?: Function;\r\n}\r\n\r\nexport interface ITimelineInterface {\r\n  message: string;\r\n  extra: string;\r\n  status?: string;\r\n  links?: ITimelineInterfaceLink[];\r\n}\r\n\r\n@Component({\r\n  selector: 'app-custom-timeline',\r\n  templateUrl: './timeline.component.html',\r\n  styleUrls: ['./timeline.component.scss'],\r\n})\r\nexport class CustomTimelineComponent implements OnInit {\r\n  /* data: Array de objetos que representam os eventos do timeline*/\r\n  @Input() data: ITimelineInterface[] = [];\r\n\r\n  constructor() {}\r\n\r\n  /*\r\n  * Método que inicializa os dados do componente\r\n  */\r\n  ngOnInit(): void {}\r\n\r\n\r\n  /*\r\n  * Pegar data formatada\r\n  */\r\n  getDate(date: Date): string {\r\n    return date.toLocaleDateString('pt-BR');\r\n  }\r\n}\r\n",
+            "properties": [
+                {
+                    "name": "event",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Function",
+                    "optional": true,
+                    "description": "",
+                    "line": 5
+                },
+                {
+                    "name": "title",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 4
+                }
+            ],
+            "indexSignatures": [],
+            "kind": 165,
+            "methods": []
+        }
+    ],
+    "injectables": [],
+    "guards": [],
+    "interceptors": [],
+    "classes": [],
+    "directives": [],
+    "components": [
+        {
+            "name": "AppComponent",
+            "id": "component-AppComponent-b21fce7db99a5eb565e42d7639d7a048bf27610f99e0ba6a40bee1f2a6965007c4d57d9af911a5f7722567855c2bdfd0cdb74b2a8d4a3647ffc47a3dd0839ffc",
+            "file": "src/app/app.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-root",
+            "styleUrls": [
+                "./app.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./app.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "title",
+                    "defaultValue": "'angular-storybook'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 9
+                }
+            ],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component } from '@angular/core';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.scss']\n})\nexport class AppComponent {\n  title = 'angular-storybook';\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./app.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "templateData": "<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->\n<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->\n<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->\n<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->\n<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->\n<!-- * * * * * * * * * Delete the template below * * * * * * * * * * -->\n<!-- * * * * * * * to get started with your project! * * * * * * * * -->\n<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->\n\n<style>\n  :host {\n    font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\";\n    font-size: 14px;\n    color: #333;\n    box-sizing: border-box;\n    -webkit-font-smoothing: antialiased;\n    -moz-osx-font-smoothing: grayscale;\n  }\n\n  h1,\n  h2,\n  h3,\n  h4,\n  h5,\n  h6 {\n    margin: 8px 0;\n  }\n\n  p {\n    margin: 0;\n  }\n\n  .spacer {\n    flex: 1;\n  }\n\n  .toolbar {\n    position: absolute;\n    top: 0;\n    left: 0;\n    right: 0;\n    height: 60px;\n    display: flex;\n    align-items: center;\n    background-color: #1976d2;\n    color: white;\n    font-weight: 600;\n  }\n\n  .toolbar img {\n    margin: 0 16px;\n  }\n\n  .toolbar #twitter-logo {\n    height: 40px;\n    margin: 0 8px;\n  }\n\n  .toolbar #youtube-logo {\n    height: 40px;\n    margin: 0 16px;\n  }\n\n  .toolbar #twitter-logo:hover,\n  .toolbar #youtube-logo:hover {\n    opacity: 0.8;\n  }\n\n  .content {\n    display: flex;\n    margin: 82px auto 32px;\n    padding: 0 16px;\n    max-width: 960px;\n    flex-direction: column;\n    align-items: center;\n  }\n\n  svg.material-icons {\n    height: 24px;\n    width: auto;\n  }\n\n  svg.material-icons:not(:last-child) {\n    margin-right: 8px;\n  }\n\n  .card svg.material-icons path {\n    fill: #888;\n  }\n\n  .card-container {\n    display: flex;\n    flex-wrap: wrap;\n    justify-content: center;\n    margin-top: 16px;\n  }\n\n  .card {\n    all: unset;\n    border-radius: 4px;\n    border: 1px solid #eee;\n    background-color: #fafafa;\n    height: 40px;\n    width: 200px;\n    margin: 0 8px 16px;\n    padding: 16px;\n    display: flex;\n    flex-direction: row;\n    justify-content: center;\n    align-items: center;\n    transition: all 0.2s ease-in-out;\n    line-height: 24px;\n  }\n\n  .card-container .card:not(:last-child) {\n    margin-right: 0;\n  }\n\n  .card.card-small {\n    height: 16px;\n    width: 168px;\n  }\n\n  .card-container .card:not(.highlight-card) {\n    cursor: pointer;\n  }\n\n  .card-container .card:not(.highlight-card):hover {\n    transform: translateY(-3px);\n    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);\n  }\n\n  .card-container .card:not(.highlight-card):hover .material-icons path {\n    fill: rgb(105, 103, 103);\n  }\n\n  .card.highlight-card {\n    background-color: #1976d2;\n    color: white;\n    font-weight: 600;\n    border: none;\n    width: auto;\n    min-width: 30%;\n    position: relative;\n  }\n\n  .card.card.highlight-card span {\n    margin-left: 60px;\n  }\n\n  svg#rocket {\n    width: 80px;\n    position: absolute;\n    left: -10px;\n    top: -24px;\n  }\n\n  svg#rocket-smoke {\n    height: calc(100vh - 95px);\n    position: absolute;\n    top: 10px;\n    right: 180px;\n    z-index: -10;\n  }\n\n  a,\n  a:visited,\n  a:hover {\n    color: #1976d2;\n    text-decoration: none;\n  }\n\n  a:hover {\n    color: #125699;\n  }\n\n  .terminal {\n    position: relative;\n    width: 80%;\n    max-width: 600px;\n    border-radius: 6px;\n    padding-top: 45px;\n    margin-top: 8px;\n    overflow: hidden;\n    background-color: rgb(15, 15, 16);\n  }\n\n  .terminal::before {\n    content: \"\\2022 \\2022 \\2022\";\n    position: absolute;\n    top: 0;\n    left: 0;\n    height: 4px;\n    background: rgb(58, 58, 58);\n    color: #c2c3c4;\n    width: 100%;\n    font-size: 2rem;\n    line-height: 0;\n    padding: 14px 0;\n    text-indent: 4px;\n  }\n\n  .terminal pre {\n    font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;\n    color: white;\n    padding: 0 1rem 1rem;\n    margin: 0;\n  }\n\n  .circle-link {\n    height: 40px;\n    width: 40px;\n    border-radius: 40px;\n    margin: 8px;\n    background-color: white;\n    border: 1px solid #eeeeee;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    cursor: pointer;\n    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);\n    transition: 1s ease-out;\n  }\n\n  .circle-link:hover {\n    transform: translateY(-0.25rem);\n    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);\n  }\n\n  footer {\n    margin-top: 8px;\n    display: flex;\n    align-items: center;\n    line-height: 20px;\n  }\n\n  footer a {\n    display: flex;\n    align-items: center;\n  }\n\n  .github-star-badge {\n    color: #24292e;\n    display: flex;\n    align-items: center;\n    font-size: 12px;\n    padding: 3px 10px;\n    border: 1px solid rgba(27,31,35,.2);\n    border-radius: 3px;\n    background-image: linear-gradient(-180deg,#fafbfc,#eff3f6 90%);\n    margin-left: 4px;\n    font-weight: 600;\n  }\n\n  .github-star-badge:hover {\n    background-image: linear-gradient(-180deg,#f0f3f6,#e6ebf1 90%);\n    border-color: rgba(27,31,35,.35);\n    background-position: -.5em;\n  }\n\n  .github-star-badge .material-icons {\n    height: 16px;\n    width: 16px;\n    margin-right: 4px;\n  }\n\n  svg#clouds {\n    position: fixed;\n    bottom: -160px;\n    left: -230px;\n    z-index: -10;\n    width: 1920px;\n  }\n\n  /* Responsive Styles */\n  @media screen and (max-width: 767px) {\n    .card-container > *:not(.circle-link) ,\n    .terminal {\n      width: 100%;\n    }\n\n    .card:not(.highlight-card) {\n      height: 16px;\n      margin: 8px 0;\n    }\n\n    .card.highlight-card span {\n      margin-left: 72px;\n    }\n\n    svg#rocket-smoke {\n      right: 120px;\n      transform: rotate(-5deg);\n    }\n  }\n\n  @media screen and (max-width: 575px) {\n    svg#rocket-smoke {\n      display: none;\n      visibility: hidden;\n    }\n  }\n</style>\n\n<!-- Toolbar -->\n<div class=\"toolbar\" role=\"banner\">\n  <img\n    width=\"40\"\n    alt=\"Angular Logo\"\n    src=\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==\"\n  />\n  <span>Welcome</span>\n    <div class=\"spacer\"></div>\n    <a aria-label=\"Angular on twitter\" target=\"_blank\" rel=\"noopener\" href=\"https://twitter.com/angular\" title=\"Twitter\">\n      <svg id=\"twitter-logo\" height=\"24\" data-name=\"Logo\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 400 400\">\n        <rect width=\"400\" height=\"400\" fill=\"none\"/>\n        <path d=\"M153.62,301.59c94.34,0,145.94-78.16,145.94-145.94,0-2.22,0-4.43-.15-6.63A104.36,104.36,0,0,0,325,122.47a102.38,102.38,0,0,1-29.46,8.07,51.47,51.47,0,0,0,22.55-28.37,102.79,102.79,0,0,1-32.57,12.45,51.34,51.34,0,0,0-87.41,46.78A145.62,145.62,0,0,1,92.4,107.81a51.33,51.33,0,0,0,15.88,68.47A50.91,50.91,0,0,1,85,169.86c0,.21,0,.43,0,.65a51.31,51.31,0,0,0,41.15,50.28,51.21,51.21,0,0,1-23.16.88,51.35,51.35,0,0,0,47.92,35.62,102.92,102.92,0,0,1-63.7,22A104.41,104.41,0,0,1,75,278.55a145.21,145.21,0,0,0,78.62,23\" fill=\"#fff\"/>\n      </svg>\n    </a>\n    <a aria-label=\"Angular on YouTube\" target=\"_blank\" rel=\"noopener\" href=\"https://youtube.com/angular\" title=\"YouTube\">\n      <svg id=\"youtube-logo\" height=\"24\" width=\"24\" data-name=\"Logo\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"#fff\">\n        <path d=\"M0 0h24v24H0V0z\" fill=\"none\"/>\n        <path d=\"M21.58 7.19c-.23-.86-.91-1.54-1.77-1.77C18.25 5 12 5 12 5s-6.25 0-7.81.42c-.86.23-1.54.91-1.77 1.77C2 8.75 2 12 2 12s0 3.25.42 4.81c.23.86.91 1.54 1.77 1.77C5.75 19 12 19 12 19s6.25 0 7.81-.42c.86-.23 1.54-.91 1.77-1.77C22 15.25 22 12 22 12s0-3.25-.42-4.81zM10 15V9l5.2 3-5.2 3z\"/>\n      </svg>\n    </a>\n</div>\n\n<div class=\"content\" role=\"main\">\n\n  <!-- Highlight Card -->\n  <div class=\"card highlight-card card-small\">\n\n    <svg id=\"rocket\" xmlns=\"http://www.w3.org/2000/svg\" width=\"101.678\" height=\"101.678\" viewBox=\"0 0 101.678 101.678\">\n      <title>Rocket Ship</title>\n      <g id=\"Group_83\" data-name=\"Group 83\" transform=\"translate(-141 -696)\">\n        <circle id=\"Ellipse_8\" data-name=\"Ellipse 8\" cx=\"50.839\" cy=\"50.839\" r=\"50.839\" transform=\"translate(141 696)\" fill=\"#dd0031\"/>\n        <g id=\"Group_47\" data-name=\"Group 47\" transform=\"translate(165.185 720.185)\">\n          <path id=\"Path_33\" data-name=\"Path 33\" d=\"M3.4,42.615a3.084,3.084,0,0,0,3.553,3.553,21.419,21.419,0,0,0,12.215-6.107L9.511,30.4A21.419,21.419,0,0,0,3.4,42.615Z\" transform=\"translate(0.371 3.363)\" fill=\"#fff\"/>\n          <path id=\"Path_34\" data-name=\"Path 34\" d=\"M53.3,3.221A3.09,3.09,0,0,0,50.081,0,48.227,48.227,0,0,0,18.322,13.437c-6-1.666-14.991-1.221-18.322,7.218A33.892,33.892,0,0,1,9.439,25.1l-.333.666a3.013,3.013,0,0,0,.555,3.553L23.985,43.641a2.9,2.9,0,0,0,3.553.555l.666-.333A33.892,33.892,0,0,1,32.647,53.3c8.55-3.664,8.884-12.326,7.218-18.322A48.227,48.227,0,0,0,53.3,3.221ZM34.424,9.772a6.439,6.439,0,1,1,9.106,9.106,6.368,6.368,0,0,1-9.106,0A6.467,6.467,0,0,1,34.424,9.772Z\" transform=\"translate(0 0.005)\" fill=\"#fff\"/>\n        </g>\n      </g>\n    </svg>\n\n    <span>{{ title }} app is running!</span>\n\n    <svg id=\"rocket-smoke\" xmlns=\"http://www.w3.org/2000/svg\" width=\"516.119\" height=\"1083.632\" viewBox=\"0 0 516.119 1083.632\">\n      <title>Rocket Ship Smoke</title>\n      <path id=\"Path_40\" data-name=\"Path 40\" d=\"M644.6,141S143.02,215.537,147.049,870.207s342.774,201.755,342.774,201.755S404.659,847.213,388.815,762.2c-27.116-145.51-11.551-384.124,271.9-609.1C671.15,139.365,644.6,141,644.6,141Z\" transform=\"translate(-147.025 -140.939)\" fill=\"#f5f5f5\"/>\n    </svg>\n\n  </div>\n\n  <!-- Resources -->\n  <h2>Resources</h2>\n  <p>Here are some links to help you get started:</p>\n\n  <div class=\"card-container\">\n    <a class=\"card\" target=\"_blank\" rel=\"noopener\" href=\"https://angular.io/tutorial\">\n      <svg class=\"material-icons\" xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path d=\"M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z\"/></svg>\n      <span>Learn Angular</span>\n      <svg class=\"material-icons\" xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path d=\"M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z\"/></svg>    </a>\n\n    <a class=\"card\" target=\"_blank\" rel=\"noopener\" href=\"https://angular.io/cli\">\n      <svg class=\"material-icons\" xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path d=\"M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z\"/></svg>\n      <span>CLI Documentation</span>\n      <svg class=\"material-icons\" xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path d=\"M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z\"/></svg>\n    </a>\n\n    <a class=\"card\" target=\"_blank\" rel=\"noopener\" href=\"https://material.angular.io\">\n      <svg xmlns=\"http://www.w3.org/2000/svg\" style=\"margin-right: 8px\" width=\"21.813\" height=\"23.453\" viewBox=\"0 0 179.2 192.7\"><path fill=\"#ffa726\" d=\"M89.4 0 0 32l13.5 118.4 75.9 42.3 76-42.3L179.2 32 89.4 0z\"/><path fill=\"#fb8c00\" d=\"M89.4 0v192.7l76-42.3L179.2 32 89.4 0z\"/><path fill=\"#ffe0b2\" d=\"m102.9 146.3-63.3-30.5 36.3-22.4 63.7 30.6-36.7 22.3z\"/><path fill=\"#fff3e0\" d=\"M102.9 122.8 39.6 92.2l36.3-22.3 63.7 30.6-36.7 22.3z\"/><path fill=\"#fff\" d=\"M102.9 99.3 39.6 68.7l36.3-22.4 63.7 30.6-36.7 22.4z\"/></svg>\n      <span>Angular Material</span>\n      <svg class=\"material-icons\" xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path d=\"M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z\"/></svg>\n    </a>\n\n    <a class=\"card\" target=\"_blank\" rel=\"noopener\" href=\"https://blog.angular.io/\">\n      <svg class=\"material-icons\" xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path d=\"M13.5.67s.74 2.65.74 4.8c0 2.06-1.35 3.73-3.41 3.73-2.07 0-3.63-1.67-3.63-3.73l.03-.36C5.21 7.51 4 10.62 4 14c0 4.42 3.58 8 8 8s8-3.58 8-8C20 8.61 17.41 3.8 13.5.67zM11.71 19c-1.78 0-3.22-1.4-3.22-3.14 0-1.62 1.05-2.76 2.81-3.12 1.77-.36 3.6-1.21 4.62-2.58.39 1.29.59 2.65.59 4.04 0 2.65-2.15 4.8-4.8 4.8z\"/></svg>\n      <span>Angular Blog</span>\n      <svg class=\"material-icons\" xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path d=\"M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z\"/></svg>\n    </a>\n\n    <a class=\"card\" target=\"_blank\" rel=\"noopener\" href=\"https://angular.io/devtools/\">\n      <svg class=\"material-icons\" xmlns=\"http://www.w3.org/2000/svg\" enable-background=\"new 0 0 24 24\" height=\"24px\" viewBox=\"0 0 24 24\" width=\"24px\" fill=\"#000000\"><g><rect fill=\"none\" height=\"24\" width=\"24\"/></g><g><g><path d=\"M14.73,13.31C15.52,12.24,16,10.93,16,9.5C16,5.91,13.09,3,9.5,3S3,5.91,3,9.5C3,13.09,5.91,16,9.5,16 c1.43,0,2.74-0.48,3.81-1.27L19.59,21L21,19.59L14.73,13.31z M9.5,14C7.01,14,5,11.99,5,9.5S7.01,5,9.5,5S14,7.01,14,9.5 S11.99,14,9.5,14z\"/><polygon points=\"10.29,8.44 9.5,6 8.71,8.44 6.25,8.44 8.26,10.03 7.49,12.5 9.5,10.97 11.51,12.5 10.74,10.03 12.75,8.44\"/></g></g></svg>\n      <span>Angular DevTools</span>\n      <svg class=\"material-icons\" xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path d=\"M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z\"/></svg>\n    </a>\n\n  </div>\n\n  <!-- Next Steps -->\n  <h2>Next Steps</h2>\n  <p>What do you want to do next with your app?</p>\n\n  <input type=\"hidden\" #selection>\n\n  <div class=\"card-container\">\n    <button class=\"card card-small\" (click)=\"selection.value = 'component'\" tabindex=\"0\">\n      <svg class=\"material-icons\" xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path d=\"M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z\"/></svg>\n      <span>New Component</span>\n    </button>\n\n    <button class=\"card card-small\" (click)=\"selection.value = 'material'\" tabindex=\"0\">\n      <svg class=\"material-icons\" xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path d=\"M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z\"/></svg>\n      <span>Angular Material</span>\n    </button>\n\n    <button class=\"card card-small\" (click)=\"selection.value = 'pwa'\" tabindex=\"0\">\n      <svg class=\"material-icons\" xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path d=\"M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z\"/></svg>\n      <span>Add PWA Support</span>\n    </button>\n\n    <button class=\"card card-small\" (click)=\"selection.value = 'dependency'\" tabindex=\"0\">\n      <svg class=\"material-icons\" xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path d=\"M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z\"/></svg>\n      <span>Add Dependency</span>\n    </button>\n\n    <button class=\"card card-small\" (click)=\"selection.value = 'test'\" tabindex=\"0\">\n      <svg class=\"material-icons\" xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path d=\"M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z\"/></svg>\n      <span>Run and Watch Tests</span>\n    </button>\n\n    <button class=\"card card-small\" (click)=\"selection.value = 'build'\" tabindex=\"0\">\n      <svg class=\"material-icons\" xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path d=\"M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z\"/></svg>\n      <span>Build for Production</span>\n    </button>\n  </div>\n\n  <!-- Terminal -->\n  <div class=\"terminal\" [ngSwitch]=\"selection.value\">\n      <pre *ngSwitchDefault>ng generate component xyz</pre>\n      <pre *ngSwitchCase=\"'material'\">ng add @angular/material</pre>\n      <pre *ngSwitchCase=\"'pwa'\">ng add @angular/pwa</pre>\n      <pre *ngSwitchCase=\"'dependency'\">ng add _____</pre>\n      <pre *ngSwitchCase=\"'test'\">ng test</pre>\n      <pre *ngSwitchCase=\"'build'\">ng build</pre>\n  </div>\n\n  <!-- Links -->\n  <div class=\"card-container\">\n    <a class=\"circle-link\" title=\"Find a Local Meetup\" href=\"https://www.meetup.com/find/?keywords=angular\" target=\"_blank\" rel=\"noopener\">\n      <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24.607\" height=\"23.447\" viewBox=\"0 0 24.607 23.447\">\n        <title>Meetup Logo</title>\n        <path id=\"logo--mSwarm\" d=\"M21.221,14.95A4.393,4.393,0,0,1,17.6,19.281a4.452,4.452,0,0,1-.8.069c-.09,0-.125.035-.154.117a2.939,2.939,0,0,1-2.506,2.091,2.868,2.868,0,0,1-2.248-.624.168.168,0,0,0-.245-.005,3.926,3.926,0,0,1-2.589.741,4.015,4.015,0,0,1-3.7-3.347,2.7,2.7,0,0,1-.043-.38c0-.106-.042-.146-.143-.166a3.524,3.524,0,0,1-1.516-.69A3.623,3.623,0,0,1,2.23,14.557a3.66,3.66,0,0,1,1.077-3.085.138.138,0,0,0,.026-.2,3.348,3.348,0,0,1-.451-1.821,3.46,3.46,0,0,1,2.749-3.28.44.44,0,0,0,.355-.281,5.072,5.072,0,0,1,3.863-3,5.028,5.028,0,0,1,3.555.666.31.31,0,0,0,.271.03A4.5,4.5,0,0,1,18.3,4.7a4.4,4.4,0,0,1,1.334,2.751,3.658,3.658,0,0,1,.022.706.131.131,0,0,0,.1.157,2.432,2.432,0,0,1,1.574,1.645,2.464,2.464,0,0,1-.7,2.616c-.065.064-.051.1-.014.166A4.321,4.321,0,0,1,21.221,14.95ZM13.4,14.607a2.09,2.09,0,0,0,1.409,1.982,4.7,4.7,0,0,0,1.275.221,1.807,1.807,0,0,0,.9-.151.542.542,0,0,0,.321-.545.558.558,0,0,0-.359-.534,1.2,1.2,0,0,0-.254-.078c-.262-.047-.526-.086-.787-.138a.674.674,0,0,1-.617-.75,3.394,3.394,0,0,1,.218-1.109c.217-.658.509-1.286.79-1.918a15.609,15.609,0,0,0,.745-1.86,1.95,1.95,0,0,0,.06-1.073,1.286,1.286,0,0,0-1.051-1.033,1.977,1.977,0,0,0-1.521.2.339.339,0,0,1-.446-.042c-.1-.092-.2-.189-.307-.284a1.214,1.214,0,0,0-1.643-.061,7.563,7.563,0,0,1-.614.512A.588.588,0,0,1,10.883,8c-.215-.115-.437-.215-.659-.316a2.153,2.153,0,0,0-.695-.248A2.091,2.091,0,0,0,7.541,8.562a9.915,9.915,0,0,0-.405.986c-.559,1.545-1.015,3.123-1.487,4.7a1.528,1.528,0,0,0,.634,1.777,1.755,1.755,0,0,0,1.5.211,1.35,1.35,0,0,0,.824-.858c.543-1.281,1.032-2.584,1.55-3.875.142-.355.28-.712.432-1.064a.548.548,0,0,1,.851-.24.622.622,0,0,1,.185.539,2.161,2.161,0,0,1-.181.621c-.337.852-.68,1.7-1.018,2.552a2.564,2.564,0,0,0-.173.528.624.624,0,0,0,.333.71,1.073,1.073,0,0,0,.814.034,1.22,1.22,0,0,0,.657-.655q.758-1.488,1.511-2.978.35-.687.709-1.37a1.073,1.073,0,0,1,.357-.434.43.43,0,0,1,.463-.016.373.373,0,0,1,.153.387.7.7,0,0,1-.057.236c-.065.157-.127.316-.2.469-.42.883-.846,1.763-1.262,2.648A2.463,2.463,0,0,0,13.4,14.607Zm5.888,6.508a1.09,1.09,0,0,0-2.179.006,1.09,1.09,0,0,0,2.179-.006ZM1.028,12.139a1.038,1.038,0,1,0,.01-2.075,1.038,1.038,0,0,0-.01,2.075ZM13.782.528a1.027,1.027,0,1,0-.011,2.055A1.027,1.027,0,0,0,13.782.528ZM22.21,6.95a.882.882,0,0,0-1.763.011A.882.882,0,0,0,22.21,6.95ZM4.153,4.439a.785.785,0,1,0,.787-.78A.766.766,0,0,0,4.153,4.439Zm8.221,18.22a.676.676,0,1,0-.677.666A.671.671,0,0,0,12.374,22.658ZM22.872,12.2a.674.674,0,0,0-.665.665.656.656,0,0,0,.655.643.634.634,0,0,0,.655-.644A.654.654,0,0,0,22.872,12.2ZM7.171-.123A.546.546,0,0,0,6.613.43a.553.553,0,1,0,1.106,0A.539.539,0,0,0,7.171-.123ZM24.119,9.234a.507.507,0,0,0-.493.488.494.494,0,0,0,.494.494.48.48,0,0,0,.487-.483A.491.491,0,0,0,24.119,9.234Zm-19.454,9.7a.5.5,0,0,0-.488-.488.491.491,0,0,0-.487.5.483.483,0,0,0,.491.479A.49.49,0,0,0,4.665,18.936Z\" transform=\"translate(0 0.123)\" fill=\"#f64060\"/>\n      </svg>\n    </a>\n\n    <a class=\"circle-link\" title=\"Join the Conversation on Discord\" href=\"https://discord.gg/angular\" target=\"_blank\" rel=\"noopener\">\n      <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"26\" height=\"26\" viewBox=\"0 0 245 240\">\n        <title>Discord Logo</title>\n        <path d=\"M104.4 103.9c-5.7 0-10.2 5-10.2 11.1s4.6 11.1 10.2 11.1c5.7 0 10.2-5 10.2-11.1.1-6.1-4.5-11.1-10.2-11.1zM140.9 103.9c-5.7 0-10.2 5-10.2 11.1s4.6 11.1 10.2 11.1c5.7 0 10.2-5 10.2-11.1s-4.5-11.1-10.2-11.1z\"/>\n        <path d=\"M189.5 20h-134C44.2 20 35 29.2 35 40.6v135.2c0 11.4 9.2 20.6 20.5 20.6h113.4l-5.3-18.5 12.8 11.9 12.1 11.2 21.5 19V40.6c0-11.4-9.2-20.6-20.5-20.6zm-38.6 130.6s-3.6-4.3-6.6-8.1c13.1-3.7 18.1-11.9 18.1-11.9-4.1 2.7-8 4.6-11.5 5.9-5 2.1-9.8 3.5-14.5 4.3-9.6 1.8-18.4 1.3-25.9-.1-5.7-1.1-10.6-2.7-14.7-4.3-2.3-.9-4.8-2-7.3-3.4-.3-.2-.6-.3-.9-.5-.2-.1-.3-.2-.4-.3-1.8-1-2.8-1.7-2.8-1.7s4.8 8 17.5 11.8c-3 3.8-6.7 8.3-6.7 8.3-22.1-.7-30.5-15.2-30.5-15.2 0-32.2 14.4-58.3 14.4-58.3 14.4-10.8 28.1-10.5 28.1-10.5l1 1.2c-18 5.2-26.3 13.1-26.3 13.1s2.2-1.2 5.9-2.9c10.7-4.7 19.2-6 22.7-6.3.6-.1 1.1-.2 1.7-.2 6.1-.8 13-1 20.2-.2 9.5 1.1 19.7 3.9 30.1 9.6 0 0-7.9-7.5-24.9-12.7l1.4-1.6s13.7-.3 28.1 10.5c0 0 14.4 26.1 14.4 58.3 0 0-8.5 14.5-30.6 15.2z\"/>\n      </svg>\n    </a>\n  </div>\n\n  <!-- Footer -->\n  <footer>\n      Love Angular?&nbsp;\n      <a href=\"https://github.com/angular/angular\" target=\"_blank\" rel=\"noopener\"> Give our repo a star.\n        <div class=\"github-star-badge\">\n            <svg class=\"material-icons\" xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path d=\"M0 0h24v24H0z\" fill=\"none\"/><path d=\"M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z\"/></svg>\n          Star\n        </div>\n      </a>\n      <a href=\"https://github.com/angular/angular\" target=\"_blank\" rel=\"noopener\">\n        <svg class=\"material-icons\" xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path d=\"M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z\" fill=\"#1976d2\"/><path d=\"M0 0h24v24H0z\" fill=\"none\"/></svg>\n      </a>\n  </footer>\n\n  <svg id=\"clouds\" xmlns=\"http://www.w3.org/2000/svg\" width=\"2611.084\" height=\"485.677\" viewBox=\"0 0 2611.084 485.677\">\n    <title>Gray Clouds Background</title>\n    <path id=\"Path_39\" data-name=\"Path 39\" d=\"M2379.709,863.793c10-93-77-171-168-149-52-114-225-105-264,15-75,3-140,59-152,133-30,2.83-66.725,9.829-93.5,26.25-26.771-16.421-63.5-23.42-93.5-26.25-12-74-77-130-152-133-39-120-212-129-264-15-54.084-13.075-106.753,9.173-138.488,48.9-31.734-39.726-84.4-61.974-138.487-48.9-52-114-225-105-264,15a162.027,162.027,0,0,0-103.147,43.044c-30.633-45.365-87.1-72.091-145.206-58.044-52-114-225-105-264,15-75,3-140,59-152,133-53,5-127,23-130,83-2,42,35,72,70,86,49,20,106,18,157,5a165.625,165.625,0,0,0,120,0c47,94,178,113,251,33,61.112,8.015,113.854-5.72,150.492-29.764a165.62,165.62,0,0,0,110.861-3.236c47,94,178,113,251,33,31.385,4.116,60.563,2.495,86.487-3.311,25.924,5.806,55.1,7.427,86.488,3.311,73,80,204,61,251-33a165.625,165.625,0,0,0,120,0c51,13,108,15,157-5a147.188,147.188,0,0,0,33.5-18.694,147.217,147.217,0,0,0,33.5,18.694c49,20,106,18,157,5a165.625,165.625,0,0,0,120,0c47,94,178,113,251,33C2446.709,1093.793,2554.709,922.793,2379.709,863.793Z\" transform=\"translate(142.69 -634.312)\" fill=\"#eee\"/>\n  </svg>\n\n</div>\n\n<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->\n<!-- * * * * * * * * * * * The content above * * * * * * * * * * * -->\n<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->\n<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->\n<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->\n<!-- * * * * * * * * * * End of Placeholder * * * * * * * * * * * -->\n<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->\n\n"
+        },
+        {
+            "name": "BbAgencyCardComponent",
+            "id": "component-BbAgencyCardComponent-e0da49d209d217f19214f3b56546e3a5ce36efbd257fdefacfe55e09fa8790476f621bd293e77efa8642fa6f6a85b8487a6a9a2fdcf1f2efad1c80507b64b3aa",
+            "file": "src/app/components/bb-agency-card/bb-agency-card.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "bb-agency-card",
+            "styleUrls": [
+                "./bb-agency-card.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./bb-agency-card.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "address",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "pos": 1462,
+                            "end": 1475,
+                            "flags": 4227072,
+                            "modifierFlagsCache": 0,
+                            "transformFlags": 0,
+                            "kind": 325,
+                            "tagName": {
+                                "pos": 1463,
+                                "end": 1471,
+                                "flags": 4227072,
+                                "modifierFlagsCache": 0,
+                                "transformFlags": 0,
+                                "kind": 79,
+                                "escapedText": "optional"
+                            },
+                            "comment": ""
+                        }
+                    ],
+                    "rawdescription": "\n\nEndereço completo\n\n",
+                    "description": "<p>Endereço completo</p>\n",
+                    "line": 80,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "mapUrl",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "pos": 1743,
+                            "end": 1756,
+                            "flags": 4227072,
+                            "modifierFlagsCache": 0,
+                            "transformFlags": 0,
+                            "kind": 325,
+                            "tagName": {
+                                "pos": 1744,
+                                "end": 1752,
+                                "flags": 4227072,
+                                "modifierFlagsCache": 0,
+                                "transformFlags": 0,
+                                "kind": 79,
+                                "escapedText": "optional"
+                            },
+                            "comment": ""
+                        }
+                    ],
+                    "rawdescription": "\n\nURL do mapa\n\n",
+                    "description": "<p>URL do mapa</p>\n",
+                    "line": 104,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "name",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "pos": 1287,
+                            "end": 1300,
+                            "flags": 4227072,
+                            "modifierFlagsCache": 0,
+                            "transformFlags": 0,
+                            "kind": 325,
+                            "tagName": {
+                                "pos": 1288,
+                                "end": 1296,
+                                "flags": 4227072,
+                                "modifierFlagsCache": 0,
+                                "transformFlags": 0,
+                                "kind": 79,
+                                "escapedText": "required"
+                            },
+                            "comment": ""
+                        }
+                    ],
+                    "rawdescription": "\n\nNome ou número\n\n",
+                    "description": "<p>Nome ou número</p>\n",
+                    "line": 64,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "openingHours",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "pos": 1561,
+                            "end": 1574,
+                            "flags": 4227072,
+                            "modifierFlagsCache": 0,
+                            "transformFlags": 0,
+                            "kind": 325,
+                            "tagName": {
+                                "pos": 1562,
+                                "end": 1570,
+                                "flags": 4227072,
+                                "modifierFlagsCache": 0,
+                                "transformFlags": 0,
+                                "kind": 79,
+                                "escapedText": "optional"
+                            },
+                            "comment": ""
+                        }
+                    ],
+                    "rawdescription": "\n\nHorário de funcionamento\n\n",
+                    "description": "<p>Horário de funcionamento</p>\n",
+                    "line": 88,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "services",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "pos": 1659,
+                            "end": 1672,
+                            "flags": 4227072,
+                            "modifierFlagsCache": 0,
+                            "transformFlags": 0,
+                            "kind": 325,
+                            "tagName": {
+                                "pos": 1660,
+                                "end": 1668,
+                                "flags": 4227072,
+                                "modifierFlagsCache": 0,
+                                "transformFlags": 0,
+                                "kind": 79,
+                                "escapedText": "optional"
+                            },
+                            "comment": ""
+                        }
+                    ],
+                    "rawdescription": "\n\nServiços ofertados\n\n",
+                    "description": "<p>Serviços ofertados</p>\n",
+                    "line": 96,
+                    "type": "string[]",
+                    "decorators": []
+                },
+                {
+                    "name": "tel",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "pos": 1374,
+                            "end": 1387,
+                            "flags": 4227072,
+                            "modifierFlagsCache": 0,
+                            "transformFlags": 0,
+                            "kind": 325,
+                            "tagName": {
+                                "pos": 1375,
+                                "end": 1383,
+                                "flags": 4227072,
+                                "modifierFlagsCache": 0,
+                                "transformFlags": 0,
+                                "kind": 79,
+                                "escapedText": "optional"
+                            },
+                            "comment": ""
+                        }
+                    ],
+                    "rawdescription": "\n\nTelefone com DDD\n\n",
+                    "description": "<p>Telefone com DDD</p>\n",
+                    "line": 72,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "type",
+                    "defaultValue": "'default'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "pos": 1835,
+                            "end": 1848,
+                            "flags": 4227072,
+                            "modifierFlagsCache": 0,
+                            "transformFlags": 0,
+                            "kind": 325,
+                            "tagName": {
+                                "pos": 1836,
+                                "end": 1844,
+                                "flags": 4227072,
+                                "modifierFlagsCache": 0,
+                                "transformFlags": 0,
+                                "kind": 79,
+                                "escapedText": "optional"
+                            },
+                            "comment": ""
+                        }
+                    ],
+                    "rawdescription": "\n\nServiços ofertados\n\n",
+                    "description": "<p>Serviços ofertados</p>\n",
+                    "line": 112,
+                    "type": "\"default\" | \"estilo\" | \"private\"",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 122,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\n",
+                    "description": "",
+                    "jsdoctags": []
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "<p>Componente utilizado para exibir informações das agências no Encontre o BB, dentro do Portal 4.0.</p>\n<h3 id=\"como-aplicar-no-html\"><strong>Como aplicar no HTML:</strong></h3>\n<div><pre class=\"line-numbers\"><code class=\"language-html\">&lt;bb-agency-card\nname=&quot;Agência 4268&quot;\ntel=&quot;61 40033001&quot;\naddress=&quot;SHIS, QI 5 Bloco F, Lojas 17/125 &lt;br /&gt;Centro comercial Gilberto Salomão &lt;br /&gt;Asa Norte, Brasília - DF, 70873-500&quot;\nopeningHours=&quot;Segunda a Sexta, de 10h às 15h&quot;\n[services]=&quot;[\n&#39;Saque&#39;,\n&#39;Extratos e Saldos&#39;,\n&#39;Pagamentos&#39;,\n&#39;Depósitos&#39;\n]&quot;\nmapUrl=&quot;https://goo.gl/maps/iLtQt8KAcEdpWmDU8&quot;\ntype=&quot;private&quot;\n&gt;&lt;/bb-agency-card&gt;</code></pre></div><h3 id=\"parâmetros-possíveis\">Parâmetros possíveis:</h3>\n<div><pre class=\"line-numbers\"><code class=\"language-ts\">// Nome ou número\nname: string = &#39;&#39;;\n\n// Telefone com DDD\ntel?: string = &#39;&#39;;\n\n// Endereço completo\naddress?: string = &#39;&#39;;\n\n// Horário de funcionamento\nopeningHours?: string = &#39;&#39;;\n\n// Serviços ofertados\nservices?: string[];\n\n// URL do mapa\nmapUrl?: string = &#39;&#39;;\n\n// Serviços ofertados\ntype?: &#39;default&#39; | &#39;estilo&#39; | &#39;private&#39; = &#39;default&#39;;</code></pre></div><p><example-url>/playground-portal/agency-card</example-url></p>\n",
+            "rawdescription": "\n\nComponente utilizado para exibir informações das agências no Encontre o BB, dentro do Portal 4.0.\n\n### **Como aplicar no HTML:**\n\n```html\n<bb-agency-card\nname=\"Agência 4268\"\ntel=\"61 40033001\"\naddress=\"SHIS, QI 5 Bloco F, Lojas 17/125 <br />Centro comercial Gilberto Salomão <br />Asa Norte, Brasília - DF, 70873-500\"\nopeningHours=\"Segunda a Sexta, de 10h às 15h\"\n[services]=\"[\n'Saque',\n'Extratos e Saldos',\n'Pagamentos',\n'Depósitos'\n]\"\nmapUrl=\"https://goo.gl/maps/iLtQt8KAcEdpWmDU8\"\ntype=\"private\"\n></bb-agency-card>\n```\n\n### Parâmetros possíveis:\n\n```ts\n// Nome ou número\nname: string = '';\n\n// Telefone com DDD\ntel?: string = '';\n\n// Endereço completo\naddress?: string = '';\n\n// Horário de funcionamento\nopeningHours?: string = '';\n\n// Serviços ofertados\nservices?: string[];\n\n// URL do mapa\nmapUrl?: string = '';\n\n// Serviços ofertados\ntype?: 'default' | 'estilo' | 'private' = 'default';\n```\n\n<example-url>/playground-portal/agency-card</example-url>\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input } from '@angular/core';\n\n/**\n * Componente utilizado para exibir informações das agências no Encontre o BB, dentro do Portal 4.0.\n *\n * ### **Como aplicar no HTML:**\n *\n```html\n<bb-agency-card\n  name=\"Agência 4268\"\n  tel=\"61 40033001\"\n  address=\"SHIS, QI 5 Bloco F, Lojas 17/125 <br />Centro comercial Gilberto Salomão <br />Asa Norte, Brasília - DF, 70873-500\"\n  openingHours=\"Segunda a Sexta, de 10h às 15h\"\n  [services]=\"[\n    'Saque',\n    'Extratos e Saldos',\n    'Pagamentos',\n    'Depósitos'\n  ]\"\n  mapUrl=\"https://goo.gl/maps/iLtQt8KAcEdpWmDU8\"\n  type=\"private\"\n></bb-agency-card>\n```\n *\n * ### Parâmetros possíveis:\n *\n```ts\n// Nome ou número\nname: string = '';\n\n// Telefone com DDD\ntel?: string = '';\n\n// Endereço completo\naddress?: string = '';\n\n// Horário de funcionamento\nopeningHours?: string = '';\n\n// Serviços ofertados\nservices?: string[];\n\n// URL do mapa\nmapUrl?: string = '';\n\n// Serviços ofertados\ntype?: 'default' | 'estilo' | 'private' = 'default';\n```\n *\n * <example-url>/playground-portal/agency-card</example-url>\n */\n@Component({\n  selector: 'bb-agency-card',\n  templateUrl: './bb-agency-card.component.html',\n  styleUrls: ['./bb-agency-card.component.scss'],\n})\nexport class BbAgencyCardComponent {\n  /**\n   * Nome ou número\n   *\n   * @required\n   */\n  @Input()\n  name: string = '';\n\n  /**\n   * Telefone com DDD\n   *\n   * @optional\n   */\n  @Input()\n  tel?: string = '';\n\n  /**\n   * Endereço completo\n   *\n   * @optional\n   */\n  @Input()\n  address?: string = '';\n\n  /**\n   * Horário de funcionamento\n   *\n   * @optional\n   */\n  @Input()\n  openingHours?: string = '';\n\n  /**\n   * Serviços ofertados\n   *\n   * @optional\n   */\n  @Input()\n  services?: string[];\n\n  /**\n   * URL do mapa\n   *\n   * @optional\n   */\n  @Input()\n  mapUrl?: string = '';\n\n  /**\n   * Serviços ofertados\n   *\n   * @optional\n   */\n  @Input()\n  type?: 'default' | 'estilo' | 'private' = 'default';\n\n  /**\n   * @internal\n   */\n  constructor() {}\n\n  /**\n   * @internal\n   */\n  ngOnInit(): void {}\n\n  get attrName(){\n    return `Ver ${this.name} no mapa`;\n  }\n}\n",
+            "exampleUrls": [
+                "/playground-portal/agency-card"
+            ],
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "\n@mixin responsive {\n  @media (max-width: 767px) {\n    @content;\n  }\n}\n\n@mixin desktop {\n  @media (min-width: 768px) {\n    @content;\n  }\n}\n\n.bb-agency-card {\n  width: 100%;\n  overflow: hidden;\n  div.name {\n    display: flex;\n    align-items: center;\n    padding: 24px 24px 19px;\n    @include responsive {\n      display: block;\n    }\n\n    span {\n      margin-right: 16px;\n      padding-right: 16px;\n      border-right: 1px solid #585b65;\n\n      @include responsive {\n        border-right: none;\n        margin: 0 0 16px;\n        padding: 0;\n        display: block;\n      }\n    }\n\n    h4 {\n      line-height: 1.18em;\n      font-weight: 700;\n      display: block;\n      color: #333333;\n      margin: 0;\n      padding: 0;\n    }\n  }\n\n  div.info {\n    padding: 16px 24px;\n    display: flex;\n    align-items: center;\n    justify-content: space-between;\n\n    > span {\n      width: 51px;\n\n      svg {\n        height: 22px;\n        width: auto;\n\n        path {\n          // fill: ;\n        }\n      }\n    }\n\n    > p {\n      width: calc(100% - 51px);\n      margin: 0;\n      padding: 0;\n\n      font-style: normal;\n      font-weight: 400;\n      font-size: 16px;\n      line-height: 26px;\n      color: #585b65;\n\n      strong {\n        font: inherit;\n        font-weight: bold;\n        color: inherit;\n        margin: 0;\n        padding: 0;\n      }\n    }\n\n    &.services {\n      padding: 24px;\n      background: #f4f4f6;\n    }\n  }\n\n  div.map-url {\n    padding: 24px;\n\n    a,\n    button {\n      background: none;\n      border: none;\n      text-decoration: none;\n      width: 117px;\n      height: 32px;\n      background: #e4ecff;\n      border-radius: 4px;\n      display: flex;\n      align-items: center;\n      justify-content: center;\n\n      line-height: 1em;\n      font-style: normal;\n      font-weight: 700;\n      font-size: 12px;\n      letter-spacing: 0.005em;\n      text-transform: uppercase;\n      color: #3354fd;\n      transition: all 0.5s ease 0s;\n\n      &:hover {\n        filter: hue-rotate(-10deg) brightness(100%);\n        outline: none;\n        box-shadow: none !important;\n      }\n    }\n  }\n\n  &.private {\n    background: #f4f4f6;\n\n    div.info {\n      &.services {\n        background: #585a66;\n\n        svg path {\n          fill: #fff;\n        }\n\n        > p {\n          color: #fff;\n        }\n      }\n    }\n  }\n\n  &.estilo {\n    background: #f4f4f6;\n\n    div.info {\n      svg path {\n        fill: var(--primary-dark, #fff);\n      }\n\n      > p {\n        color: #585b65;\n      }\n\n      &.services {\n        background: #002d4c;\n\n        svg path {\n          fill: var(--primary-dark, #fff);\n        }\n\n        > p {\n          color: #afafaf;\n        }\n      }\n    }\n  }\n}\n",
+                    "styleUrl": "./bb-agency-card.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [],
+                "line": 112,
+                "rawdescription": "\n\n",
+                "jsdoctags": []
+            },
+            "accessors": {
+                "attrName": {
+                    "name": "attrName",
+                    "getSignature": {
+                        "name": "attrName",
+                        "type": "",
+                        "returnType": "",
+                        "line": 124
+                    }
+                }
+            },
+            "templateData": "<div class=\"bb-agency-card\" [ngClass]=\"type\">\n  <div class=\"name\" *ngIf=\"name && name.length\">\n    <span *ngIf=\"type === 'private'\">\n      <svg\n        width=\"121\"\n        height=\"30\"\n        viewBox=\"0 0 121 30\"\n        fill=\"none\"\n        xmlns=\"http://www.w3.org/2000/svg\"\n      >\n        <path\n          d=\"M20.8594 10L17.8125 7.96875L0 20L15 30L30 20L23.75 15.8594L16.25 20.9375L19.5313 23.0469L15 25.7813L6.48437 20L20.8594 10Z\"\n          fill=\"#585B65\"\n        />\n        <path\n          d=\"M6.25 25.8594L3.125 23.75L0 25.8594V30L6.25 25.8594Z\"\n          fill=\"#585B65\"\n        />\n        <path\n          d=\"M30 10L15 0L0 10L6.25 14.1406L13.75 9.0625L10.4687 6.95313L15 4.21875L23.5156 10L9.14062 20L12.1875 22.0313L30 10Z\"\n          fill=\"#585B65\"\n        />\n        <path\n          d=\"M30 4.14062V0L23.75 4.14062L26.875 6.25L30 4.14062Z\"\n          fill=\"#585B65\"\n        />\n        <g clip-path=\"url(#clip0_422_4413)\">\n          <path\n            d=\"M57.1278 6.5H56.1533H50V23.5H54.4271V16.6118H56.1533H56.8494C60.3855 16.6118 62.1396 14.9311 62.1396 11.5972C62.1675 8.18071 60.4969 6.5 57.1278 6.5ZM57.3784 13.1126C57.0165 13.6637 56.5988 13.9392 56.1533 13.9392H54.4271V9.08995H55.9306H56.042H56.1533C56.738 9.17261 57.1835 9.47569 57.4898 9.99919C57.7404 10.4676 57.8796 11.0186 57.8796 11.6523C57.8796 12.1483 57.7125 12.6167 57.3784 13.1126Z\"\n            fill=\"#585B65\"\n          />\n          <path\n            d=\"M73.3606 12.9748C73.3606 11.8452 73.0543 10.9359 72.4139 10.3022C71.7735 9.64097 70.8825 9.33789 69.741 9.33789H63.0029V23.5275H66.6782V11.487H67.8755C68.488 11.487 68.9614 11.6799 69.3233 12.0932C69.6574 12.4789 69.8523 13.0024 69.8523 13.6086C69.8523 14.1596 69.741 14.6005 69.5182 14.9862C69.2398 15.427 68.8221 15.6475 68.321 15.6475H67.2629L70.6041 23.5H73.8618L70.799 16.5842C72.4974 16.2536 73.3606 15.0688 73.3606 12.9748Z\"\n            fill=\"#585B65\"\n          />\n          <path\n            d=\"M78.79 9.33789H75.2261V23.5275H78.79V9.33789Z\"\n            fill=\"#585B65\"\n          />\n          <path\n            d=\"M87.7831 9.33789L85.5 19.6977H85.4164L83.3561 9.33789H79.5972L83.1611 23.5H87.3933L91.2635 9.33789H87.7831Z\"\n            fill=\"#585B65\"\n          />\n          <path\n            d=\"M95.5512 9.33789H93.6022L89.5093 23.5275H93.0454L93.9085 20.4967H95.7183H97.5559L98.3634 23.5275H102.178L97.8622 9.33789H95.5512ZM95.6905 18.3476H94.3261L95.4956 12.3136H95.5512V12.3962L97.0548 18.3476H95.6905Z\"\n            fill=\"#585B65\"\n          />\n          <path\n            d=\"M100.619 11.6799H104.183V23.5H107.746V11.6799H111.199V9.33789H100.619V11.6799Z\"\n            fill=\"#585B65\"\n          />\n          <path\n            d=\"M115.877 21.3509V17.3557H120.443V15.2066H115.877V11.6799H120.805V9.33789H112.257V23.5H121V21.3509H115.877Z\"\n            fill=\"#585B65\"\n          />\n        </g>\n        <defs>\n          <clipPath id=\"clip0_422_4413\">\n            <rect\n              width=\"71\"\n              height=\"17\"\n              fill=\"white\"\n              transform=\"translate(50 6.5)\"\n            />\n          </clipPath>\n        </defs>\n      </svg>\n    </span>\n\n    <span *ngIf=\"type === 'estilo'\">\n      <svg\n        width=\"104\"\n        height=\"30\"\n        viewBox=\"0 0 104 30\"\n        fill=\"none\"\n        xmlns=\"http://www.w3.org/2000/svg\"\n      >\n        <path\n          d=\"M10.3643 6.99427L13.5583 9.12259L6.22467 14.0752L0.0592001 9.96583L14.8895 0L29.6159 9.93551L12.0797 21.764L9.09371 19.7541L23.2425 10.1434L14.4896 4.19887L10.3643 6.99427Z\"\n          fill=\"#002D4B\"\n        />\n        <path\n          d=\"M19.3541 22.9032L16.1602 20.7735L23.5241 15.8209L29.704 19.9317L14.7711 29.896L0.0880782 19.9894L17.6387 8.13207L20.6262 10.1434L6.49035 19.7541L15.2433 25.6972L19.3541 22.9032Z\"\n          fill=\"#002D4B\"\n        />\n        <path\n          d=\"M0 25.9628L0.0288781 30L6.10627 25.934L3.07552 23.8634L0 25.9628Z\"\n          fill=\"#002D4B\"\n        />\n        <path\n          d=\"M29.7632 4.19887L26.7772 6.21023L23.7306 4.1108L29.7632 0.0880782V4.19887Z\"\n          fill=\"#002D4B\"\n        />\n        <path\n          d=\"M42.3309 15.8209H48.4228V12.9663H42.3309V8.56091H48.97V5.41175H37.5112V24.145H49.1332V21.3351H42.3309V15.8209Z\"\n          fill=\"#002D4B\"\n        />\n        <path\n          d=\"M58.9358 15.9393L59.8672 16.2641C60.1617 16.4273 60.4332 16.628 60.6714 16.8605C60.8981 17.0799 61.0974 17.3297 61.262 17.6026C61.6027 18.1629 61.789 18.8025 61.8034 19.4581C61.9103 20.2305 61.7962 21.0189 61.4757 21.7308C61.3385 22.0325 61.1667 22.3155 60.9645 22.5754C60.6902 22.9263 60.3595 23.2324 59.9856 23.4793C58.7611 24.0092 57.427 24.2388 56.0971 24.145H50.4486V21.764H55.8156C56.0755 21.7726 56.3339 21.7235 56.5722 21.6181C56.8104 21.5127 57.0212 21.3568 57.1902 21.159C57.515 20.7345 57.6869 20.2132 57.6782 19.6804C57.6782 19.3512 57.515 19.0249 57.1931 18.6986C57.0487 18.5542 56.8739 18.4098 56.6675 18.2639C56.4003 18.0762 56.0812 17.8871 55.7116 17.6979L52.0903 15.9985C51.5113 15.6794 51.0261 15.2173 50.681 14.6542C50.3359 14.0911 50.1439 13.4485 50.1237 12.7901C50.1237 10.025 51.9863 8.54647 55.7564 8.54647H60.4144V11.1484H56.2588C54.9434 11.1484 54.2778 11.6956 54.2778 12.7901C54.2778 13.5727 54.9434 14.2239 56.2588 14.8303C57.2349 15.2736 58.1215 15.6577 58.9358 15.9393Z\"\n          fill=\"#002D4B\"\n        />\n        <path\n          d=\"M61.685 11.1484H65.5735V24.2042H69.4633V11.1484H73.2334V8.56091H61.685V11.1484Z\"\n          fill=\"#002D4B\"\n        />\n        <path\n          d=\"M74.9921 8.56091H78.8805V24.2042H74.9921V8.56091Z\"\n          fill=\"#002D4B\"\n        />\n        <path\n          d=\"M85.4604 8.56091H81.5127V24.2042H90.2801V21.7799H85.4604V8.56091Z\"\n          fill=\"#002D4B\"\n        />\n        <path\n          fill-rule=\"evenodd\"\n          clip-rule=\"evenodd\"\n          d=\"M97.1271 8.28079C99.8619 8.28079 101.606 9.10815 102.435 10.7643C103.067 12.601 103.329 14.5459 103.203 16.4865C103.323 18.3766 103.062 20.2724 102.435 22.06C101.99 22.9292 101.317 23.5703 100.406 23.989C99.5341 24.3904 98.444 24.5882 97.1271 24.5882C94.4357 24.5882 92.6756 23.7609 91.8034 22.06C91.1768 20.2724 90.9154 18.3766 91.0353 16.4865C90.9154 14.5473 91.1768 12.6024 91.8034 10.7643C92.6914 9.10815 94.3909 8.28079 97.1271 8.28079ZM98.2909 21.8737C98.6158 21.5979 98.8223 21.211 98.8714 20.7893C99.1674 17.9333 99.1674 15.0541 98.8714 12.1981C98.8511 12.0191 98.8035 11.8443 98.7313 11.6826C98.6317 11.4574 98.4844 11.2538 98.2967 11.0877C97.9747 10.8004 97.5574 10.643 97.1271 10.6459C96.1944 10.6459 95.6486 11.2076 95.367 12.2429C95.1634 13.6666 95.0898 15.1076 95.1446 16.5457C95.0854 17.9983 95.1591 19.4523 95.367 20.8919C95.4248 21.312 95.637 21.6961 95.9619 21.9704C96.2882 22.2433 96.7026 22.3848 97.1271 22.3704V22.2679C97.5502 22.2896 97.9675 22.148 98.2909 21.8737Z\"\n          fill=\"#002D4B\"\n        />\n      </svg>\n    </span>\n\n    <h4>{{ name }}</h4>\n  </div>\n\n  <div class=\"info tel\" *ngIf=\"tel && tel.length\">\n    <span>\n      <svg\n        width=\"23\"\n        height=\"23\"\n        viewBox=\"0 0 23 23\"\n        fill=\"none\"\n        xmlns=\"http://www.w3.org/2000/svg\"\n      >\n        <path\n          fill-rule=\"evenodd\"\n          clip-rule=\"evenodd\"\n          d=\"M2.95591 1.67613C3.19649 1.43589 3.48538 1.24952 3.80342 1.12939C4.12147 1.00925 4.46142 0.958082 4.80074 0.979275C5.14006 1.00047 5.471 1.09354 5.77163 1.25231C6.07226 1.41109 6.33572 1.63195 6.54454 1.90026L9.01259 5.07116C9.46495 5.65281 9.62445 6.41047 9.4457 7.1255L8.6936 10.1369C8.65472 10.2929 8.65682 10.4562 8.6997 10.6112C8.74258 10.7661 8.82479 10.9073 8.93834 11.0211L12.3166 14.3996C12.4305 14.5134 12.5719 14.5957 12.7271 14.6386C12.8823 14.6815 13.0459 14.6835 13.2021 14.6443L16.2119 13.8922C16.5647 13.804 16.933 13.7971 17.2888 13.8721C17.6447 13.9472 17.9789 14.1022 18.2661 14.3253L21.4367 16.7922C22.5765 17.6791 22.681 19.3636 21.6608 20.3825L20.2391 21.8043C19.2216 22.8218 17.7009 23.2687 16.2834 22.7696C12.6551 21.4929 9.36083 19.4156 6.64491 16.6918C3.92152 13.9761 1.8444 10.682 0.567605 7.054C0.0698711 5.63768 0.516732 4.11549 1.5342 3.09794L2.95591 1.67613Z\"\n          fill=\"#002D4B\"\n        />\n      </svg>\n    </span>\n    <p>\n      <strong>{{ tel }}</strong>\n    </p>\n  </div>\n\n  <div class=\"info address\" *ngIf=\"address && address.length\">\n    <span>\n      <svg\n        width=\"18\"\n        height=\"23\"\n        viewBox=\"0 0 18 23\"\n        fill=\"none\"\n        xmlns=\"http://www.w3.org/2000/svg\"\n      >\n        <path\n          fill-rule=\"evenodd\"\n          clip-rule=\"evenodd\"\n          d=\"M6.93813 5.54883C7.57126 5.12578 8.31562 4.89999 9.07707 4.89999C10.0982 4.89999 11.0774 5.30561 11.7994 6.02762C12.5214 6.74963 12.9271 7.72889 12.9271 8.74997C12.9271 9.51143 12.7013 10.2558 12.2782 10.8889C11.8552 11.522 11.2539 12.0155 10.5504 12.3069C9.84691 12.5983 9.0728 12.6745 8.32598 12.526C7.57915 12.3774 6.89315 12.0108 6.35472 11.4723C5.81629 10.9339 5.44961 10.2479 5.30106 9.50107C5.15251 8.75424 5.22875 7.98014 5.52015 7.27665C5.81154 6.57315 6.30501 5.97187 6.93813 5.54883ZM8.16039 10.1219C8.43173 10.3032 8.75074 10.4 9.07707 10.4C9.51468 10.4 9.93436 10.2261 10.2438 9.9167C10.5532 9.60726 10.7271 9.18758 10.7271 8.74997C10.7271 8.42364 10.6303 8.10463 10.449 7.83329C10.2677 7.56195 10.01 7.35046 9.7085 7.22558C9.407 7.10069 9.07524 7.06802 8.75517 7.13168C8.43511 7.19535 8.14111 7.35249 7.91035 7.58325C7.67959 7.81401 7.52245 8.10801 7.45878 8.42807C7.39512 8.74814 7.42779 9.0799 7.55268 9.3814C7.67756 9.6829 7.88905 9.94059 8.16039 10.1219Z\"\n          fill=\"#002D4B\"\n        />\n        <path\n          fill-rule=\"evenodd\"\n          clip-rule=\"evenodd\"\n          d=\"M2.88546 3.04626C4.53327 1.41493 6.75834 0.499884 9.07707 0.5C11.3958 0.499884 13.6209 1.41493 15.2687 3.04626C16.9165 4.67759 17.8539 6.89336 17.877 9.21197C17.877 15.24 10.1771 21.9499 9.79207 22.2359C9.59282 22.4064 9.33926 22.5 9.07707 22.5C8.81488 22.5 8.56132 22.4064 8.36207 22.2359L8.36027 22.2344C8.00496 21.9265 0.2771 15.2294 0.2771 9.21197C0.300287 6.89336 1.23765 4.67759 2.88546 3.04626ZM2.47709 9.21197C2.47709 13.315 7.24008 18.1659 9.07707 19.9149C10.9141 18.1659 15.677 13.282 15.677 9.21197C15.677 7.46155 14.9817 5.78282 13.744 4.54508C12.5062 3.30735 10.8275 2.61199 9.07707 2.61199C7.32665 2.61199 5.64792 3.30735 4.41018 4.54508C3.17245 5.78282 2.47709 7.46155 2.47709 9.21197Z\"\n          fill=\"#002D4B\"\n        />\n      </svg>\n    </span>\n    <p [innerHtml]=\"address\"></p>\n  </div>\n\n  <div class=\"info opening-hours\" *ngIf=\"openingHours && openingHours.length\">\n    <span>\n      <svg\n        width=\"22\"\n        height=\"23\"\n        viewBox=\"0 0 22 23\"\n        fill=\"none\"\n        xmlns=\"http://www.w3.org/2000/svg\"\n      >\n        <path\n          d=\"M10.9731 0.408569C4.89859 0.408569 -0.0268555 5.33402 -0.0268555 11.4086C-0.0268555 17.4831 4.89859 22.4086 10.9731 22.4086C17.0477 22.4086 21.9731 17.4831 21.9731 11.4086C21.9731 5.33402 17.0477 0.408569 10.9731 0.408569ZM15.3068 14.7896L14.6046 15.7472C14.5893 15.768 14.5701 15.7857 14.548 15.7991C14.5259 15.8124 14.5013 15.8213 14.4758 15.8252C14.4502 15.8291 14.4242 15.8279 14.3991 15.8217C14.374 15.8154 14.3504 15.8043 14.3296 15.7889L10.2685 12.8278C10.2432 12.8096 10.2226 12.7856 10.2085 12.7578C10.1944 12.7301 10.1872 12.6993 10.1874 12.6682V5.90857C10.1874 5.80053 10.2758 5.71214 10.3839 5.71214H11.5649C11.6729 5.71214 11.7613 5.80053 11.7613 5.90857V11.9856L15.2627 14.5171C15.351 14.5784 15.3707 14.7012 15.3068 14.7896Z\"\n          fill=\"#002D4B\"\n        />\n      </svg>\n    </span>\n    <p>{{ openingHours }}</p>\n  </div>\n\n  <div class=\"info services\" *ngIf=\"services && services.length\">\n    <span>\n      <svg\n        width=\"28\"\n        height=\"23\"\n        viewBox=\"0 0 28 23\"\n        fill=\"none\"\n        xmlns=\"http://www.w3.org/2000/svg\"\n      >\n        <path\n          d=\"M15.5005 17.6159L19.2992 13.8082L23.4829 17.8263C23.5388 17.8796 23.5836 17.9435 23.6145 18.0143C23.6455 18.0851 23.662 18.1613 23.6632 18.2386C23.6644 18.3158 23.6502 18.3925 23.6214 18.4642C23.5926 18.5359 23.5499 18.6011 23.4956 18.6561L20.3225 21.8535C20.2681 21.9083 20.2032 21.9517 20.1317 21.9809C20.0602 22.0101 19.9836 22.0246 19.9063 22.0236C19.8291 22.0226 19.7529 22.006 19.6822 21.9748C19.6115 21.9437 19.5478 21.8987 19.4949 21.8424L15.5005 17.6159Z\"\n          fill=\"#002D4B\"\n        />\n        <path\n          d=\"M5.87177 8.02257C6.05422 8.20503 6.26576 8.44089 6.26576 8.69844C6.26576 8.95546 6.05422 9.20402 5.8723 9.38594L3.91239 11.3427C3.84575 11.4093 3.7554 11.4467 3.66119 11.4467C3.56698 11.4467 3.47663 11.4093 3.40999 11.3427L0.0782523 8.02257C0.010951 7.95524 -0.0268555 7.86393 -0.0268555 7.76873C-0.0268555 7.67353 0.010951 7.58222 0.0782523 7.51488L2.03499 5.56397C2.12427 5.47386 2.23066 5.40251 2.3479 5.35411C2.46515 5.3057 2.59088 5.28122 2.71773 5.28209C2.9225 5.2823 3.12198 5.34707 3.28782 5.46719C3.28412 5.44974 3.28412 5.43123 3.28412 5.4143C3.2635 5.12344 3.23282 4.68397 3.51576 4.28574C3.85219 3.83086 4.22143 3.40117 4.62052 3.00012L4.62422 2.99642C5.21811 2.4094 6.51062 1.30358 8.49062 0.492326C9.24172 0.183464 10.0461 0.0249892 10.8583 0.0258827C12.2645 0.0258827 13.3338 0.663143 13.7452 1.04127C13.8395 1.12826 13.9311 1.2182 14.0197 1.31098C14.2943 1.59197 14.5324 1.90647 14.7284 2.24704L14.0937 3.25185C13.9062 3.16487 13.7116 3.0941 13.512 3.04031C13.4544 3.02656 13.3047 2.99271 13.1212 2.96627C12.9183 2.93309 12.7124 2.92245 12.5072 2.93454C11.9191 2.98319 11.2824 3.16618 10.9736 3.4105C10.4521 3.83358 9.99942 4.49622 10.2332 5.31435C10.3389 5.68454 10.6562 6.25411 11.8726 7.55931C11.9807 7.45293 12.1264 7.39357 12.2781 7.39416C12.4297 7.39476 12.575 7.45526 12.6823 7.56248L13.1186 7.97709L9.64615 11.4236L9.25321 11.0079C9.14642 10.9003 9.08589 10.7552 9.0845 10.6035C9.08312 10.4519 9.141 10.3057 9.24581 10.1961C9.06338 10.0271 8.79247 9.77097 8.49902 9.49354C7.83125 8.8622 7.04677 8.12051 6.92259 8.04373C6.57937 7.83166 6.33398 7.79094 6.26682 7.78407C6.09212 7.76677 5.91633 7.8037 5.76335 7.88983C5.76264 7.89745 5.76349 7.90513 5.76585 7.91241C5.76822 7.91969 5.77205 7.9264 5.7771 7.93214L5.85855 8.00988L5.87177 8.02257Z\"\n          fill=\"#002D4B\"\n        />\n        <path\n          d=\"M21.9752 7.65238L26.2636 3.37718C27.4196 5.77075 27.4239 9.09666 25.4407 11.0772C23.6035 12.9091 20.7033 13.1508 18.4208 12.2935L8.90153 21.8392C8.84257 21.8984 8.77252 21.9453 8.69538 21.9774C8.61824 22.0094 8.53554 22.0259 8.45201 22.0259C8.36849 22.0259 8.28578 22.0094 8.20864 21.9774C8.13151 21.9453 8.06145 21.8984 8.00249 21.8392L5.23821 19.0834C5.17905 19.0244 5.1321 18.9544 5.10007 18.8773C5.06804 18.8001 5.05156 18.7174 5.05156 18.6339C5.05156 18.5504 5.06804 18.4677 5.10007 18.3905C5.1321 18.3134 5.17905 18.2433 5.23821 18.1844L14.7707 8.72753C13.8616 6.42228 14.0948 3.49194 15.9627 1.6304C17.9485 -0.349599 21.303 -0.344839 23.6944 0.818623L19.406 5.09223L21.9752 7.65238Z\"\n          fill=\"#002D4B\"\n        />\n      </svg>\n    </span>\n    <p>\n      <ng-container *ngFor=\"let service of services; let idx = index\">\n        {{ idx > 0 ? \" | \" + service : service }}\n      </ng-container>\n    </p>\n  </div>\n\n  <div class=\"map-url\" *ngIf=\"mapUrl && mapUrl.length\">\n    <a [href]=\"mapUrl\" target=\"_blank\" rel=\"noopener noreferrer\" data-bb-acao=\"botao-agencia\" data-bb-rotulo=\"Ver no mapa\" [title]=\"attrName\">Ver no mapa</a>\n  </div>\n</div>\n"
+        },
+        {
+            "name": "BbReceptiveFaqComponent",
+            "id": "component-BbReceptiveFaqComponent-f92ad1a6f7dc081e33d893ef2c8556afc77c1e2d64a265cd24327f02e21279412a0effdbbfebc5be639cb191dc9293eadcc633c1959148999376de27cf8f88a1",
+            "file": "src/app/components/bb-receptive-faq/bb-receptive-faq.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "bb-receptive-faq",
+            "styleUrls": [
+                "./bb-receptive-faq.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./bb-receptive-faq.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "answerColor",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nDefine a cor da resposta\n",
+                    "description": "<p>Define a cor da resposta</p>\n",
+                    "line": 271,
+                    "type": "any",
+                    "decorators": []
+                },
+                {
+                    "name": "arrowColor",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nDefine a cor da seta\n",
+                    "description": "<p>Define a cor da seta</p>\n",
+                    "line": 291,
+                    "type": "any",
+                    "decorators": []
+                },
+                {
+                    "name": "background",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nCaminho para imagem de background\n",
+                    "description": "<p>Caminho para imagem de background</p>\n",
+                    "line": 186,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "backgroundAlt",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "pos": 4217,
+                            "end": 4230,
+                            "flags": 4227072,
+                            "modifierFlagsCache": 0,
+                            "transformFlags": 0,
+                            "kind": 325,
+                            "tagName": {
+                                "pos": 4218,
+                                "end": 4226,
+                                "flags": 4227072,
+                                "modifierFlagsCache": 0,
+                                "transformFlags": 0,
+                                "kind": 79,
+                                "escapedText": "optional"
+                            },
+                            "comment": ""
+                        }
+                    ],
+                    "rawdescription": "\n\nCaminho para imagem de background\n",
+                    "description": "<p>Caminho para imagem de background</p>\n",
+                    "line": 199,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "backgroundMobile",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nCaminho para imagem de background\n",
+                    "description": "<p>Caminho para imagem de background</p>\n",
+                    "line": 192,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "bgColor",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nDefine a cor de fundo do faq\n",
+                    "description": "<p>Define a cor de fundo do faq</p>\n",
+                    "line": 211,
+                    "type": "any",
+                    "decorators": []
+                },
+                {
+                    "name": "bgContainerColor",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nDefine a cor do container das perguntas\n",
+                    "description": "<p>Define a cor do container das perguntas</p>\n",
+                    "line": 231,
+                    "type": "any",
+                    "decorators": []
+                },
+                {
+                    "name": "colorTitle",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nCor do título do bloco de FAQ\n",
+                    "description": "<p>Cor do título do bloco de FAQ</p>\n",
+                    "line": 154,
+                    "type": "any",
+                    "decorators": []
+                },
+                {
+                    "name": "dataDescription",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\ndescricao do bloco de FAQ\n",
+                    "description": "<p>descricao do bloco de FAQ</p>\n",
+                    "line": 148,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "dataTitle",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nTítulo do bloco de FAQ\n",
+                    "description": "<p>Título do bloco de FAQ</p>\n",
+                    "line": 136,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "description",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\ndescricao do bloco de FAQ - LEGADO\n",
+                    "description": "<p>descricao do bloco de FAQ - LEGADO</p>\n",
+                    "line": 142,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "faqQuestions",
+                    "defaultValue": "[]",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nLista de perguntas\n",
+                    "description": "<p>Lista de perguntas</p>\n",
+                    "line": 174,
+                    "type": "Array<object>",
+                    "decorators": []
+                },
+                {
+                    "name": "itemColor",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nDefine a cor de fundo do item\n",
+                    "description": "<p>Define a cor de fundo do item</p>\n",
+                    "line": 311,
+                    "type": "any",
+                    "decorators": []
+                },
+                {
+                    "name": "limitVisible",
+                    "defaultValue": "4",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nLimite de perguntas visiveis na primeira visualização\n",
+                    "description": "<p>Limite de perguntas visiveis na primeira visualização</p>\n",
+                    "line": 180,
+                    "type": "number",
+                    "decorators": []
+                },
+                {
+                    "name": "lineColor",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nDefine a cor da borda\n",
+                    "description": "<p>Define a cor da borda</p>\n",
+                    "line": 331,
+                    "type": "any",
+                    "decorators": []
+                },
+                {
+                    "name": "linkColor",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nDefine a cor dos links\n",
+                    "description": "<p>Define a cor dos links</p>\n",
+                    "line": 351,
+                    "type": "any",
+                    "decorators": []
+                },
+                {
+                    "name": "questionColor",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nDefine a cor da pergunta\n",
+                    "description": "<p>Define a cor da pergunta</p>\n",
+                    "line": 251,
+                    "type": "any",
+                    "decorators": []
+                },
+                {
+                    "name": "seeMoreColor",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nDefine a cor do veja mais\n",
+                    "description": "<p>Define a cor do veja mais</p>\n",
+                    "line": 371,
+                    "type": "any",
+                    "decorators": []
+                },
+                {
+                    "name": "title",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nTítulo do bloco de FAQ - LEGADO\n",
+                    "description": "<p>Título do bloco de FAQ - LEGADO</p>\n",
+                    "line": 130,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "type",
+                    "defaultValue": "'default'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nDefine a exibição da lista de perguntas\n",
+                    "description": "<p>Define a exibição da lista de perguntas</p>\n",
+                    "line": 205,
+                    "type": "\"default\" | \"full\"",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [
+                {
+                    "name": "toggleMoreQuestions",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 422,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nFunção para exibir mais perguntas na listagem\n",
+                    "description": "<p>Função para exibir mais perguntas na listagem</p>\n"
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "<p>Componente utilizado para adicionar uma seção de perguntas dentro do receptivo do Portal 4.0.</p>\n<div><pre class=\"line-numbers\"><code class=\"language-ts\">questionsList: Array&lt;object&gt; = [\n{\nquestion: &#39;Perguntas Frequentes sobre a Conta PJ Digital&#39;,\nanswer: &#39;No momento, está disponível apenas para empresa com um sócio (EI, MEI e EIRELI)&#39;\nmoreUrl:&#39;http://bb.com.br&#39;,\nmoreNewTab:false,\nmoreText:&#39;Saiba mais&#39;\n},\n{\nquestion: &#39;Posso abrir mais de uma conta para minha empresa?&#39;,\nanswer: &#39;No momento, está disponível apenas para empresa com um sócio (EI, MEI e EIRELI)&#39;,\nmoreUrl:&#39;http://bb.com.br&#39;,\nmoreNewTab:false,\nmoreText:&#39;Saiba mais&#39;\n},\n{\nquestion: &#39;Já tenho uma solicitação de abertura de conta empresa. E agora?&#39;,\nanswer: &#39;No momento, está disponível apenas para empresa com um sócio (EI, MEI e EIRELI)&#39;,\nmoreUrl:&#39;http://bb.com.br&#39;,\nmoreNewTab:false,\nmoreText:&#39;Saiba mais&#39;\n},\n{\nquestion: &#39;Posso aderir à Cesta de Benefícios com isenção de 3 meses a qualquer momento? &#39;,\nanswer: &#39;No momento, está disponível apenas para empresa com um sócio (EI, MEI e EIRELI)&#39;,\nmoreUrl:&#39;http://bb.com.br&#39;,\nmoreNewTab:false,\nmoreText:&#39;Saiba mais&#39;\n}\n];</code></pre></div><p>Como aplicar no HTML:</p>\n<div><pre class=\"line-numbers\"><code class=\"language-html\">&lt;bb-receptive-faq\ndataTitle=&quot;Perguntas Frequentes sobre a Conta PJ Digital&quot;\nbackground=&quot;/assets/images/receptivos/pj/faq-bg.png&quot;\nbackgroundMobile=&quot;/assets/images/receptivos/pj/faq-bg-mobile.png&quot;\ntype=&quot;default&quot;\n[faqQuestions]=&quot;questionsList&quot;\nbgColor=&quot;#F4F4F8&quot;\ndataDescription=&quot;Descrição do FAQ&quot;\ncolorTitle=&quot;#465EFF&quot;\n[limitVisible]=&quot;4&quot;\nbgContainerColor=&quot;#FFFFFF&quot;\nquestionColor=&quot;#212227&quot;\nanswerColor=&quot;#53565F&quot;\narrowColor=&quot;#585B65&quot;\nitemColor=&quot;#FFFFFF&quot;\nlineColor=&quot;#e7e7e7&quot;\nlinkColor=&quot;#465EFF&quot;\nseeMoreColor=&quot;#465EFF&quot;\n&gt;&lt;/bb-receptive-faq&gt;</code></pre></div><p>Parâmetros possíveis:</p>\n<div><pre class=\"line-numbers\"><code class=\"language-ts\">// Título do bloco de FAQ\ndataTitle: string = &#39;&#39;;\n\n// descricao do bloco de FAQ\ndataDescription: string = &#39;&#39;;\n\n// Cor do título do bloco de FAQ\ncolorTitle?: string = &#39;&#39;;\n\n// Lista de perguntas\nfaqQuestions: Array&lt;object&gt;;\n\n// Limite de perguntas visiveis na primeira visualização\nlimitVisible = 4;\n\n// Caminho para imagem de background\nbackground: string = &#39;&#39;;\n\n// Caminho para imagem de background\nbackgroundMobile: string = &#39;&#39;;\n\n// Define a exibição da lista de perguntas\ntype?: &#39;default&#39; | &#39;full&#39; = &#39;default&#39;;\n\n// Define a cor de fundo do faq\nbgColor?: string = &#39;&#39;;\n\n// Define a cor do container das perguntas\nbgContainerColor?: string = &#39;&#39;;\n\n// Define a cor da pergunta\nquestionColor?: string = &#39;&#39;;\n\n// Define a cor da resposta\nanswerColor?: string = &#39;&#39;;\n\n// Define a cor da seta\narrowColor?: string = &#39;&#39;;\n\n// Define a cor de fundo do item\nitemColor?: string = &#39;&#39;;\n\n// Define a cor da borda\nlineColor?: string = &#39;&#39;;\n\n// Define a cor dos links\nlinkColor?: string = &#39;&#39;;\n\n// Define a cor do veja mais\nseeMoreColor?: string = &#39;&#39;;</code></pre></div><p><example-url>/playground-portal/receptive-faq</example-url></p>\n",
+            "rawdescription": "\n\nComponente utilizado para adicionar uma seção de perguntas dentro do receptivo do Portal 4.0.\n\n```ts\nquestionsList: Array<object> = [\n{\nquestion: 'Perguntas Frequentes sobre a Conta PJ Digital',\nanswer: 'No momento, está disponível apenas para empresa com um sócio (EI, MEI e EIRELI)'\nmoreUrl:'http://bb.com.br',\nmoreNewTab:false,\nmoreText:'Saiba mais'\n},\n{\nquestion: 'Posso abrir mais de uma conta para minha empresa?',\nanswer: 'No momento, está disponível apenas para empresa com um sócio (EI, MEI e EIRELI)',\nmoreUrl:'http://bb.com.br',\nmoreNewTab:false,\nmoreText:'Saiba mais'\n},\n{\nquestion: 'Já tenho uma solicitação de abertura de conta empresa. E agora?',\nanswer: 'No momento, está disponível apenas para empresa com um sócio (EI, MEI e EIRELI)',\nmoreUrl:'http://bb.com.br',\nmoreNewTab:false,\nmoreText:'Saiba mais'\n},\n{\nquestion: 'Posso aderir à Cesta de Benefícios com isenção de 3 meses a qualquer momento? ',\nanswer: 'No momento, está disponível apenas para empresa com um sócio (EI, MEI e EIRELI)',\nmoreUrl:'http://bb.com.br',\nmoreNewTab:false,\nmoreText:'Saiba mais'\n}\n];\n```\n\nComo aplicar no HTML:\n\n```html\n<bb-receptive-faq\ndataTitle=\"Perguntas Frequentes sobre a Conta PJ Digital\"\nbackground=\"/assets/images/receptivos/pj/faq-bg.png\"\nbackgroundMobile=\"/assets/images/receptivos/pj/faq-bg-mobile.png\"\ntype=\"default\"\n[faqQuestions]=\"questionsList\"\nbgColor=\"#F4F4F8\"\ndataDescription=\"Descrição do FAQ\"\ncolorTitle=\"#465EFF\"\n[limitVisible]=\"4\"\nbgContainerColor=\"#FFFFFF\"\nquestionColor=\"#212227\"\nanswerColor=\"#53565F\"\narrowColor=\"#585B65\"\nitemColor=\"#FFFFFF\"\nlineColor=\"#e7e7e7\"\nlinkColor=\"#465EFF\"\nseeMoreColor=\"#465EFF\"\n></bb-receptive-faq>\n```\n\nParâmetros possíveis:\n\n```ts\n// Título do bloco de FAQ\ndataTitle: string = '';\n\n// descricao do bloco de FAQ\ndataDescription: string = '';\n\n// Cor do título do bloco de FAQ\ncolorTitle?: string = '';\n\n// Lista de perguntas\nfaqQuestions: Array<object>;\n\n// Limite de perguntas visiveis na primeira visualização\nlimitVisible = 4;\n\n// Caminho para imagem de background\nbackground: string = '';\n\n// Caminho para imagem de background\nbackgroundMobile: string = '';\n\n// Define a exibição da lista de perguntas\ntype?: 'default' | 'full' = 'default';\n\n// Define a cor de fundo do faq\nbgColor?: string = '';\n\n// Define a cor do container das perguntas\nbgContainerColor?: string = '';\n\n// Define a cor da pergunta\nquestionColor?: string = '';\n\n// Define a cor da resposta\nanswerColor?: string = '';\n\n// Define a cor da seta\narrowColor?: string = '';\n\n// Define a cor de fundo do item\nitemColor?: string = '';\n\n// Define a cor da borda\nlineColor?: string = '';\n\n// Define a cor dos links\nlinkColor?: string = '';\n\n// Define a cor do veja mais\nseeMoreColor?: string = '';\n```\n\n<example-url>/playground-portal/receptive-faq</example-url>\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input } from '@angular/core';\n\n/**\n * Componente utilizado para adicionar uma seção de perguntas dentro do receptivo do Portal 4.0.\n *\n```ts\nquestionsList: Array<object> = [\n  {\n    question: 'Perguntas Frequentes sobre a Conta PJ Digital',\n    answer: 'No momento, está disponível apenas para empresa com um sócio (EI, MEI e EIRELI)'\n    moreUrl:'http://bb.com.br',\n    moreNewTab:false,\n    moreText:'Saiba mais'\n  },\n  {\n    question: 'Posso abrir mais de uma conta para minha empresa?',\n    answer: 'No momento, está disponível apenas para empresa com um sócio (EI, MEI e EIRELI)',\n    moreUrl:'http://bb.com.br',\n    moreNewTab:false,\n    moreText:'Saiba mais'\n  },\n  {\n    question: 'Já tenho uma solicitação de abertura de conta empresa. E agora?',\n    answer: 'No momento, está disponível apenas para empresa com um sócio (EI, MEI e EIRELI)',\n    moreUrl:'http://bb.com.br',\n    moreNewTab:false,\n    moreText:'Saiba mais'\n  },\n  {\n    question: 'Posso aderir à Cesta de Benefícios com isenção de 3 meses a qualquer momento? ',\n    answer: 'No momento, está disponível apenas para empresa com um sócio (EI, MEI e EIRELI)',\n    moreUrl:'http://bb.com.br',\n    moreNewTab:false,\n    moreText:'Saiba mais'\n  }\n];\n```\n *\n * Como aplicar no HTML:\n *\n```html\n<bb-receptive-faq\n  dataTitle=\"Perguntas Frequentes sobre a Conta PJ Digital\"\n  background=\"/assets/images/receptivos/pj/faq-bg.png\"\n  backgroundMobile=\"/assets/images/receptivos/pj/faq-bg-mobile.png\"\n  type=\"default\"\n  [faqQuestions]=\"questionsList\"\n  bgColor=\"#F4F4F8\"\n  dataDescription=\"Descrição do FAQ\"\n  colorTitle=\"#465EFF\"\n  [limitVisible]=\"4\"\n  bgContainerColor=\"#FFFFFF\"\n  questionColor=\"#212227\"\n  answerColor=\"#53565F\"\n  arrowColor=\"#585B65\"\n  itemColor=\"#FFFFFF\"\n  lineColor=\"#e7e7e7\"\n  linkColor=\"#465EFF\"\n  seeMoreColor=\"#465EFF\"\n></bb-receptive-faq>\n```\n *\n * Parâmetros possíveis:\n *\n```ts\n// Título do bloco de FAQ\ndataTitle: string = '';\n\n// descricao do bloco de FAQ\ndataDescription: string = '';\n\n// Cor do título do bloco de FAQ\ncolorTitle?: string = '';\n\n// Lista de perguntas\nfaqQuestions: Array<object>;\n\n// Limite de perguntas visiveis na primeira visualização\nlimitVisible = 4;\n\n// Caminho para imagem de background\nbackground: string = '';\n\n// Caminho para imagem de background\nbackgroundMobile: string = '';\n\n// Define a exibição da lista de perguntas\ntype?: 'default' | 'full' = 'default';\n\n// Define a cor de fundo do faq\nbgColor?: string = '';\n\n// Define a cor do container das perguntas\nbgContainerColor?: string = '';\n\n// Define a cor da pergunta\nquestionColor?: string = '';\n\n// Define a cor da resposta\nanswerColor?: string = '';\n\n// Define a cor da seta\narrowColor?: string = '';\n\n// Define a cor de fundo do item\nitemColor?: string = '';\n\n// Define a cor da borda\nlineColor?: string = '';\n\n// Define a cor dos links\nlinkColor?: string = '';\n\n// Define a cor do veja mais\nseeMoreColor?: string = '';\n```\n *\n * <example-url>/playground-portal/receptive-faq</example-url>\n */\n@Component({\n  selector: 'bb-receptive-faq',\n  templateUrl: './bb-receptive-faq.component.html',\n  styleUrls: ['./bb-receptive-faq.component.scss'],\n})\nexport class BbReceptiveFaqComponent {\n  /**\n   * Título do bloco de FAQ - LEGADO\n   */\n  @Input()\n  title?: string = '';\n\n  /**\n   * Título do bloco de FAQ\n   */\n  @Input()\n  dataTitle?: string = '';\n\n  /**\n   * descricao do bloco de FAQ - LEGADO\n   */\n  @Input()\n  description?: string = '';\n\n  /**\n   * descricao do bloco de FAQ\n   */\n  @Input()\n  dataDescription?: string = '';\n\n  /**\n   * Cor do título do bloco de FAQ\n   */\n  @Input()\n  get colorTitle() {\n    return this._colorTitle;\n  }\n\n  /**\n   * @ignore\n   */\n  set colorTitle(value: any) {\n    this._colorTitle = value;\n  }\n\n  /**\n   * @ignore\n   */\n  private _colorTitle?: string = '';\n\n  /**\n   * Lista de perguntas\n   */\n  @Input()\n  faqQuestions: Array<object> = [];\n\n  /**\n   * Limite de perguntas visiveis na primeira visualização\n   */\n  @Input()\n  limitVisible = 4;\n\n  /**\n   * Caminho para imagem de background\n   */\n  @Input()\n  background: string = '';\n\n  /**\n   * Caminho para imagem de background\n   */\n  @Input()\n  backgroundMobile: string = '';\n\n  /**\n   * Caminho para imagem de background\n   * @optional\n   */\n  @Input()\n  backgroundAlt?: string = '';\n\n  /**\n   * Define a exibição da lista de perguntas\n   */\n  @Input()\n  type?: 'default' | 'full' = 'default';\n\n  /**\n   * Define a cor de fundo do faq\n   */\n  @Input()\n  get bgColor() {\n    return this._bgColor;\n  }\n\n  /**\n   * @ignore\n   */\n  set bgColor(value: any) {\n    this._bgColor = value;\n  }\n\n  /**\n   * @ignore\n   */\n  private _bgColor?: string = '';\n\n  /**\n   * Define a cor do container das perguntas\n   */\n  @Input()\n  get bgContainerColor() {\n    return this._bgContainerColor;\n  }\n\n  /**\n   * @ignore\n   */\n  set bgContainerColor(value: any) {\n    this._bgContainerColor = value;\n  }\n\n  /**\n   * @ignore\n   */\n  private _bgContainerColor?: string = '';\n\n  /**\n   * Define a cor da pergunta\n   */\n  @Input()\n  get questionColor() {\n    return this._questionColor;\n  }\n\n  /**\n   * @ignore\n   */\n  set questionColor(value: any) {\n    this._questionColor = value;\n  }\n\n  /**\n   * @ignore\n   */\n  private _questionColor?: string = '';\n\n  /**\n   * Define a cor da resposta\n   */\n  @Input()\n  get answerColor() {\n    return this._answerColor;\n  }\n\n  /**\n   * @ignore\n   */\n  set answerColor(value: any) {\n    this._answerColor = value;\n  }\n\n  /**\n   * @ignore\n   */\n  private _answerColor?: string = '';\n\n  /**\n   * Define a cor da seta\n   */\n  @Input()\n  get arrowColor() {\n    return this._arrowColor;\n  }\n\n  /**\n   * @ignore\n   */\n  set arrowColor(value: any) {\n    this._arrowColor = value;\n  }\n\n  /**\n   * @ignore\n   */\n  private _arrowColor?: string = '';\n\n  /**\n   * Define a cor de fundo do item\n   */\n  @Input()\n  get itemColor() {\n    return this._itemColor;\n  }\n\n  /**\n   * @ignore\n   */\n  set itemColor(value: any) {\n    this._itemColor = value;\n  }\n\n  /**\n   * @ignore\n   */\n  private _itemColor?: string = '';\n\n  /**\n   * Define a cor da borda\n   */\n  @Input()\n  get lineColor() {\n    return this._lineColor;\n  }\n\n  /**\n   * @ignore\n   */\n  set lineColor(value: any) {\n    this._lineColor = value;\n  }\n\n  /**\n   * @ignore\n   */\n  private _lineColor?: string = '';\n\n  /**\n   * Define a cor dos links\n   */\n  @Input()\n  get linkColor() {\n    return this._linkColor;\n  }\n\n  /**\n   * @ignore\n   */\n  set linkColor(value: any) {\n    this._linkColor = value;\n  }\n\n  /**\n   * @ignore\n   */\n  private _linkColor?: string = '';\n\n  /**\n   * Define a cor do veja mais\n   */\n  @Input()\n  get seeMoreColor() {\n    return this._seeMoreColor;\n  }\n\n  /**\n   * @ignore\n   */\n  set seeMoreColor(value: any) {\n    this._seeMoreColor = value;\n  }\n\n  /**\n   * @ignore\n   */\n  private _seeMoreColor?: string = '';\n\n  /**\n   * @ignore\n   */\n  showHiddenQuestions = false;\n\n  /**\n   * @ignore\n   */\n  constructor() {}\n\n  /**\n   * @ignore\n   */\n  get getGeneralCssVars(): string {\n    const getValue = (key: string, defaultValue: string): string => {\n      return defaultValue\n    };\n\n    return `\n      --title-color: ${getValue('colorTitle', '#465EFF')};\n      --bg-color: ${getValue('bgColor', '#F4F4F8')};\n      --bg-container-color: ${getValue('bgContainerColor', '#FFFFFF')};\n      --question-color: ${getValue('questionColor', '#212227')};\n      --awnswer-color: ${getValue('answerColor', '#53565F')};\n      --arrow-color: ${getValue('arrowColor', '#585B65')};\n      --item-color: ${getValue('itemColor', '#FFFFFF')};\n      --line-color: ${getValue('lineColor', '#e7e7e7')};\n      --link-color: ${getValue('linkColor', '#465EFF')};\n      --seemore-color: ${getValue('seeMoreColor', '#465EFF')};\n    `;\n  }\n\n  /**\n   * Função para exibir mais perguntas na listagem\n   */\n  toggleMoreQuestions(): void {\n    this.showHiddenQuestions = !this.showHiddenQuestions;\n  }\n\n  /**\n   * @ignore\n   */\n  ngOnInit(): void {\n    // Popular propriedades legadas.\n    this.verifyTitleDescription();\n  }\n\n  /**\n   * @ignore\n   */\n  ngOnChanges(): void {\n    // Popular propriedades legadas.\n    this.verifyTitleDescription();\n  }\n\n  /**\n   * Popular propriedades legadas de título e descrição.\n   *\n   * @ignore\n   */\n  verifyTitleDescription(): void {\n    if (!!this.dataTitle && !!this.dataTitle.length) {\n      this.title = this.dataTitle;\n    }\n\n    if (!!this.dataDescription && !!this.dataDescription.length) {\n      this.description = this.dataDescription;\n    }\n  }\n}\n",
+            "exampleUrls": [
+                "/playground-portal/receptive-faq"
+            ],
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "@import \"~@bb-design-system/tokens/dist/serotonina/tokens\";\n\n.bb-receptive-faq {\n  background-color: var(--bg-color, #f4f4f8);\n\n  @media (max-width: 991px) {\n    padding-bottom: $bbds-size-space-xlarge;\n  }\n\n  @media (min-width: 992px) {\n    padding: $bbds-size-space-xlarge 0;\n  }\n\n  .col-16 {\n    padding: 0;\n  }\n\n  h2.bb-header-xlarge {\n    color: var(--title-color, #465eff);\n    font-size: $bbds-size-font-scale-7;\n    line-height: $bbds-textstyle-title-small-lineheight-web;\n    font-family: \"BancoDoBrasilTitulos-Regular\";\n    font-display: swap;\n  }\n\n  .content-area {\n    @media (max-width: 480px) {\n      .background img {\n        width: 100%;\n        height: auto;\n        object-fit: cover;\n        object-position: center;\n      }\n    }\n\n    @media (max-width: 671px) {\n      .faq {\n        width: calc(100% - 16px);\n      }\n    }\n\n    @media (min-width: 672px) and (max-width: 991px) {\n      .faq {\n        width: calc(100% - 32px);\n      }\n    }\n\n    @media (max-width: 991px) {\n      display: flex;\n      flex-flow: column wrap;\n      justify-content: flex-start;\n      align-items: center;\n\n      .background {\n        width: 100%;\n        text-align: center;\n\n        img {\n          max-width: 100%;\n        }\n      }\n\n      .faq {\n        margin-top: -30%;\n      }\n    }\n\n    @media (min-width: 992px) {\n      display: flex;\n      flex-flow: row nowrap;\n      justify-content: flex-start;\n      align-items: flex-start;\n\n      .background,\n      .faq {\n        min-width: 65%;\n      }\n\n      .background img {\n        border-radius: 16px;\n        filter: drop-shadow(0 6px 8px rgba(24, 24, 27, 0.06))\n          drop-shadow(0 1px 4px rgba(24, 24, 27, 0.08))\n          drop-shadow(0 0 1px rgba(24, 24, 27, 0.08));\n      }\n\n      .faq {\n        margin-top: 34px;\n        transform: translateX(-47.3%);\n        border-radius: 8px;\n      }\n    }\n\n    @media (max-width: 768px) {\n      .background {\n        height: 364px;\n      }\n    }\n\n    .faq {\n      background-color: var(--bg-container-color, #ffffff);\n      // background-color: $bbds-color-background-default;\n      padding: $bbds-size-space-xlarge;\n    }\n  }\n\n  &__hide-faq {\n    max-height: 0;\n    pointer-events: none;\n    overflow: hidden;\n    margin-bottom: -2px;\n    opacity: 0;\n    transform: translateX(-20px);\n    transition: none;\n\n    @for $i from 1 through 30 {\n      &:nth-child(#{$i + 4}) {\n        transition-delay: #{$i * 0.1}s;\n      }\n    }\n  }\n\n  &__show-faq {\n    opacity: 1;\n    max-height: none;\n    pointer-events: all;\n    margin-bottom: $bbds-size-space-small;\n    transform: translateX(0);\n    transition: opacity 0.3s ease-out, transform 0.2s ease-out;\n  }\n\n  bb-accordion-item {\n    background: var(--item-color, #ffffff);\n    border-width: 0 0 1px 0;\n    border-radius: 0;\n    margin: 0;\n    border-color: var(--line-color, #e7e7e7);\n\n    &:hover,\n    &.collapsed,\n    &.expanded {\n      background: var(--item-color, #ffffff);\n    }\n\n    &.expanded {\n      &:hover {\n        background: var(--item-color, #ffffff);\n      }\n    }\n\n    &-header {\n      background: var(--item-color, #ffffff);\n      padding-left: 16px;\n      padding-right: 16px;\n\n      ::ng-deep {\n        button {\n          bb-icon {\n            color: var(--arrow-color, #585b65);\n          }\n          color: var(--arrow-color, #585b65);\n        }\n      }\n    }\n\n    &-body {\n      // padding-left: 16px;\n      // padding-right: 16px;\n    }\n\n    &-header,\n    &-body ::ng-deep .item-body {\n      color: var(--awnswer-color, #53565f);\n      border-width: 0;\n      // padding-left: 0;\n      // padding-right: 0;\n    }\n\n    &-header {\n      color: var(--question-color, #212227);\n      padding-top: 16px;\n      padding-bottom: 16px;\n    }\n\n    &-body ::ng-deep .item-body * {\n      font: inherit;\n      color: inherit;\n      line-height: inherit;\n    }\n\n    &-body ::ng-deep .item-body a {\n      color: var(--link-color, #465eff);\n    }\n\n    button {\n      bb-icon {\n        ::ng-deep {\n          color: var(--arrow-color, #585b65);\n        }\n      }\n    }\n\n    // &:hover,\n    // &:focus,\n    // &:active{\n    //   background:var(--item-color);\n    // }\n  }\n  .description {\n    font-size: 14px;\n    line-height: 19px;\n    color: #585b65;\n    @media (min-width: 992px) {\n      font-size: 18px;\n      line-height: 28px;\n    }\n  }\n\n  &.full {\n    .background {\n      display: none;\n    }\n\n    .content-area {\n      flex-flow: column;\n      width: 100%;\n\n      .faq {\n        transform: translateX(0);\n        width: 100%;\n      }\n    }\n  }\n\n  bb-link-nav {\n    ::ng-deep {\n      a {\n        color: var(--seemore-color, #465eff);\n      }\n      bb-icon {\n        color: var(--seemore-color, #465eff);\n      }\n    }\n  }\n}\n",
+                    "styleUrl": "./bb-receptive-faq.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "accessors": {
+                "colorTitle": {
+                    "name": "colorTitle",
+                    "getSignature": {
+                        "name": "colorTitle",
+                        "type": "",
+                        "returnType": "",
+                        "line": 154,
+                        "rawdescription": "\n\nCor do título do bloco de FAQ\n",
+                        "description": "<p>Cor do título do bloco de FAQ</p>\n"
+                    }
+                },
+                "bgColor": {
+                    "name": "bgColor",
+                    "getSignature": {
+                        "name": "bgColor",
+                        "type": "",
+                        "returnType": "",
+                        "line": 211,
+                        "rawdescription": "\n\nDefine a cor de fundo do faq\n",
+                        "description": "<p>Define a cor de fundo do faq</p>\n"
+                    }
+                },
+                "bgContainerColor": {
+                    "name": "bgContainerColor",
+                    "getSignature": {
+                        "name": "bgContainerColor",
+                        "type": "",
+                        "returnType": "",
+                        "line": 231,
+                        "rawdescription": "\n\nDefine a cor do container das perguntas\n",
+                        "description": "<p>Define a cor do container das perguntas</p>\n"
+                    }
+                },
+                "questionColor": {
+                    "name": "questionColor",
+                    "getSignature": {
+                        "name": "questionColor",
+                        "type": "",
+                        "returnType": "",
+                        "line": 251,
+                        "rawdescription": "\n\nDefine a cor da pergunta\n",
+                        "description": "<p>Define a cor da pergunta</p>\n"
+                    }
+                },
+                "answerColor": {
+                    "name": "answerColor",
+                    "getSignature": {
+                        "name": "answerColor",
+                        "type": "",
+                        "returnType": "",
+                        "line": 271,
+                        "rawdescription": "\n\nDefine a cor da resposta\n",
+                        "description": "<p>Define a cor da resposta</p>\n"
+                    }
+                },
+                "arrowColor": {
+                    "name": "arrowColor",
+                    "getSignature": {
+                        "name": "arrowColor",
+                        "type": "",
+                        "returnType": "",
+                        "line": 291,
+                        "rawdescription": "\n\nDefine a cor da seta\n",
+                        "description": "<p>Define a cor da seta</p>\n"
+                    }
+                },
+                "itemColor": {
+                    "name": "itemColor",
+                    "getSignature": {
+                        "name": "itemColor",
+                        "type": "",
+                        "returnType": "",
+                        "line": 311,
+                        "rawdescription": "\n\nDefine a cor de fundo do item\n",
+                        "description": "<p>Define a cor de fundo do item</p>\n"
+                    }
+                },
+                "lineColor": {
+                    "name": "lineColor",
+                    "getSignature": {
+                        "name": "lineColor",
+                        "type": "",
+                        "returnType": "",
+                        "line": 331,
+                        "rawdescription": "\n\nDefine a cor da borda\n",
+                        "description": "<p>Define a cor da borda</p>\n"
+                    }
+                },
+                "linkColor": {
+                    "name": "linkColor",
+                    "getSignature": {
+                        "name": "linkColor",
+                        "type": "",
+                        "returnType": "",
+                        "line": 351,
+                        "rawdescription": "\n\nDefine a cor dos links\n",
+                        "description": "<p>Define a cor dos links</p>\n"
+                    }
+                },
+                "seeMoreColor": {
+                    "name": "seeMoreColor",
+                    "getSignature": {
+                        "name": "seeMoreColor",
+                        "type": "",
+                        "returnType": "",
+                        "line": 371,
+                        "rawdescription": "\n\nDefine a cor do veja mais\n",
+                        "description": "<p>Define a cor do veja mais</p>\n"
+                    }
+                }
+            },
+            "templateData": "<div class=\"bb-receptive-faq\" [class.full]=\"type == 'full'\" [style]=\"getGeneralCssVars\">\n  <div class=\"container\">\n    <div class=\"row justify-content-center\">\n      <div class=\"col-16 col-lg-14\">\n        <div class=\"content-area\">\n          <div class=\"background\" *ngIf=\"type != 'full'\">\n            <picture>\n              <source\n                media=\"(max-width: 479px)\"\n                [srcset]=\"backgroundMobile\"\n                width=\"360\"\n                height=\"360\"\n              />\n              <source\n                media=\"(min-width: 480px)\"\n                [srcset]=\"background\"\n                width=\"620\"\n                height=\"560\"\n              />\n              <img [src]=\"background\" [alt]=\"backgroundAlt ? backgroundAlt : 'Faq - '+ title\" />\n            </picture>\n          </div>\n          <div class=\"faq\">\n            <h2 class=\"bb-header-xlarge\" [innerHtml]=\"title\"></h2>\n            <div class=\"description\" [innerHtml]=\"description\" ></div>\n\n            <bb-accordion class=\"mb-4\" data-bb-acao=\"duvidas\">\n              <bb-accordion-item\n                *ngFor=\"let item of faqQuestions; let i = index\"\n                [ngClass]=\"{\n                  'bb-receptive-faq__hide-faq': i > limitVisible - 1,\n                  'bb-receptive-faq__show-faq': showHiddenQuestions\n                }\"\n              >\n                <bb-accordion-item-header\n                  [attr.data-bb-rotulo]=\"item.question\"\n                >\n                  {{ item.question }}\n                </bb-accordion-item-header>\n                <bb-accordion-item-body>\n                  <div [innerHtml]=\"item.answer\" [attr.data-bb-rotulo]=\"item.question\"></div>\n                  <p *ngIf=\"item.moreUrl\">\n                    <a [href]=\"item.moreUrl\" target=\"_blank\" [title]=\"item.moreText\">{{\n                      item.moreText ? item.moreText : \"Saiba +\"\n                    }}</a>\n                  </p>\n                </bb-accordion-item-body>\n              </bb-accordion-item>\n            </bb-accordion>\n\n            <bb-link-nav\n              [icon]=\"showHiddenQuestions ? 'chevron-up' : 'chevron-down'\"\n              iconAlign=\"right\"\n              data-bb-acao=\"duvidas\"\n              [attr.data-bb-rotulo]=\"!showHiddenQuestions ? 'Ver mais perguntas' : 'Ver menos perguntas'\"\n              *ngIf=\"faqQuestions.length > limitVisible\"\n            >\n              <a href=\"javascript:void(0);\" class=\"see-more\" (click)=\"toggleMoreQuestions()\">\n                {{\n                  !showHiddenQuestions\n                    ? \"Ver mais perguntas\"\n                    : \"Ver menos perguntas\"\n                }}\n              </a>\n            </bb-link-nav>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n"
+        },
+        {
+            "name": "CardElasticComponent",
+            "id": "component-CardElasticComponent-b991eaae228e3b4881812636ae016a3df5e958143c0b3868a9e30d67190103f55ff02783be10408a4e7db623cd5e98dba60af0c43bb6342aeb379a4643b7b907",
+            "file": "src/app/components/card-elastic/card-elastic.component.ts",
+            "encapsulation": [
+                "ViewEncapsulation.None"
+            ],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-card-elastic",
+            "styleUrls": [
+                "./card-elastic.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./card-elastic.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "buttonVisible",
+                    "defaultValue": "true",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 15,
+                    "type": "boolean",
+                    "decorators": []
+                },
+                {
+                    "name": "hasDropdown",
+                    "defaultValue": "true",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 17,
+                    "type": "boolean",
+                    "decorators": []
+                },
+                {
+                    "name": "labelButton",
+                    "defaultValue": "'Adicionar'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 16,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "statusDropDown",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 18,
+                    "type": "boolean",
+                    "decorators": []
+                },
+                {
+                    "name": "subTitle",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 14,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "title",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 13,
+                    "type": "string",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { CommonModule } from '@angular/common';\nimport { Component, Input, ViewEncapsulation } from '@angular/core';\n\n@Component({\n  selector: 'app-card-elastic',\n  standalone: true,\n  imports: [CommonModule],\n  encapsulation: ViewEncapsulation.None,\n  templateUrl: './card-elastic.component.html',\n  styleUrls: ['./card-elastic.component.scss']\n})\nexport class CardElasticComponent {\n  @Input() title: string = '';\n  @Input() subTitle: string = '';\n  @Input() buttonVisible: boolean = true;\n  @Input() labelButton: string = 'Adicionar';\n  @Input() hasDropdown: boolean = true;\n  @Input() statusDropDown: boolean = false;\n\n\n\n  constructor() { }\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": ".card-elastic {\n  --card-elastic-bg: #fff;\n  --card-elastic-textColor: #000;\n  --card-elastic-color: var(--primary, #00AAEF);\n  --card-elastic-borderRadius: 12px;\n  position: relative;\n  width: max-content;\n  text-align: center;\n  &__content {\n    background-color: var(--card-elastic-bg);\n    color: var(--card-elastic-textColor);\n    padding: 20px;\n    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.25);\n    border-radius: var(--card-elastic-borderRadius);\n    position: relative;\n    z-index: 1;\n    h3 {\n      letter-spacing: -0.5px;\n      font-size: 24px;\n      line-height: 28px;\n      font-weight: 700;\n      letter-spacing: -0.4px;\n      margin: 0;\n    }\n    h4 {\n      color: var(--card-elastic-color);\n      font-size: 36px;\n      line-height: 1.5;\n      margin-top: 26px;\n      margin-bottom: 10px;\n    }\n    &--action {\n      font-size: 16px;\n      line-height: 22px;\n      display: flex;\n      flex-direction: column;\n      align-items: center;\n    }\n    button.__actionButton {\n        display: inline-flex;\n        align-items: center;\n        justify-content: center;\n        width: max-content;\n        font-size: 16px;\n        min-height: 35px;\n        padding: 6px 12px;\n        border-radius: 15px;\n        border: 1px solid var(--card-elastic-color);\n        color: var(--card-elastic-color);\n        background-color: transparent;\n        margin-top: 10px;\n        &:hover {\n          background-color: var(--card-elastic-color);\n          color: #fff;\n          cursor: pointer;\n        }\n    }\n    button.__actionDropDown {\n      background: transparent;\n      outline: none;\n      border: none;\n      margin: 12px 0 0 0;\n      transform: scale(1);\n      transition: transform 300ms ease;\n      cursor: pointer;\n      &:active {\n        transform: scale(0.8);\n      }\n    }\n  }\n  &__extend {\n    position: absolute;\n    top: calc(100% - 30px);\n    left: 0;\n    min-width: 100%;\n    box-sizing: border-box;\n    background-color: white;\n    z-index: 0;\n    border-radius: var(--card-elastic-borderRadius);\n    transition: box-shadow 100ms linear, max-height 400ms ease-in-out;\n    overflow: hidden;\n    --maxHeight: 0;\n    max-height: var(--maxHeight, 0px);\n    > div {\n      padding: 45px var(--card-elastic-borderRadius) var(--card-elastic-borderRadius) var(--card-elastic-borderRadius);\n      transition: all 300ms ease-in-out;\n    }\n    &.card-elastic__extend--show {\n      --maxHeight: 2000px;\n      box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.25);\n      > div {\n        transform: translateY(0px);\n        opacity: 1;\n      }\n    }\n    &.card-elastic__extend--hide {\n      > div {\n        transform: translateY(-10px);\n        opacity: 0;\n      }\n    }\n  }\n}\n\n",
+                    "styleUrl": "./card-elastic.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [],
+                "line": 18
+            },
+            "templateData": "<div class=\"card-elastic\">\n  <div class=\"card-elastic__content\">\n    <div>\n      <h3 *ngIf=\"title\">{{title}}</h3>\n      <h4 *ngIf=\"subTitle\">{{subTitle}}</h4>\n      <div class=\"card-elastic__content--action\">\n        <ng-content select=\"[description]\"></ng-content>\n        <ng-container *ngIf=\"buttonVisible\">\n          <button class=\"__actionButton\" type=\"button\">\n            {{labelButton}}\n          </button>\n        </ng-container>\n        <button\n          type=\"button\"\n          aria-label=\"open dropdown\"\n          *ngIf=\"hasDropdown\"\n          class=\"__actionDropDown\"\n          (click)=\"statusDropDown = !statusDropDown\"\n        >\n          <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\"><path d=\"M12 17.414 3.293 8.707l1.414-1.414L12 14.586l7.293-7.293 1.414 1.414L12 17.414z\"/></svg>\n        </button>\n      </div>\n    </div>\n  </div>\n  <div\n    class=\"card-elastic__extend\"\n    [ngClass]=\"{\n      'card-elastic__extend--show': statusDropDown,\n      'card-elastic__extend--hide': !statusDropDown\n    }\"\n  >\n    <div>\n      <ng-content select=\"extend\"></ng-content>\n      Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, ea. Vero, labore incidunt quis sint repellendus atque maiores quaerat iusto accusantium odit ex dignissimos suscipit veniam magnam cupiditate quos eligendi?\n    </div>\n  </div>\n</div>\n"
+        },
+        {
+            "name": "CustomTimelineComponent",
+            "id": "component-CustomTimelineComponent-3b33b0ae073145f3da1603ae4b753000598f985d441e59a627522933aed80597f34f7893566e6e922697381ca81e339665da90f6c3e76847b03dd295eb2f731e",
+            "file": "src/app/components/timeline/timeline.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-custom-timeline",
+            "styleUrls": [
+                "./timeline.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./timeline.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "data",
+                    "defaultValue": "[]",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 22,
+                    "type": "ITimelineInterface[]",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [
+                {
+                    "name": "getDate",
+                    "args": [
+                        {
+                            "name": "date",
+                            "type": "Date",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "string",
+                    "typeParameters": [],
+                    "line": 35,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "date",
+                            "type": "Date",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 29,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input, OnInit } from '@angular/core';\r\n\r\nexport interface ITimelineInterfaceLink {\r\n  title: string;\r\n  event?: Function;\r\n}\r\n\r\nexport interface ITimelineInterface {\r\n  message: string;\r\n  extra: string;\r\n  status?: string;\r\n  links?: ITimelineInterfaceLink[];\r\n}\r\n\r\n@Component({\r\n  selector: 'app-custom-timeline',\r\n  templateUrl: './timeline.component.html',\r\n  styleUrls: ['./timeline.component.scss'],\r\n})\r\nexport class CustomTimelineComponent implements OnInit {\r\n  /* data: Array de objetos que representam os eventos do timeline*/\r\n  @Input() data: ITimelineInterface[] = [];\r\n\r\n  constructor() {}\r\n\r\n  /*\r\n  * Método que inicializa os dados do componente\r\n  */\r\n  ngOnInit(): void {}\r\n\r\n\r\n  /*\r\n  * Pegar data formatada\r\n  */\r\n  getDate(date: Date): string {\r\n    return date.toLocaleDateString('pt-BR');\r\n  }\r\n}\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": ".timeline-container {\r\n  display: flex;\r\n  flex-direction: column;\r\n\r\n  &-item {\r\n    display: flex;\r\n    justify-content: space-between;\r\n    align-items: center;\r\n    width: 100%;\r\n    position: relative;\r\n\r\n    &-line {\r\n      width: 13px;\r\n      display: flex;\r\n      justify-content: center;\r\n      &-content {\r\n        margin: 0 auto;\r\n        position: absolute;\r\n        height: 100%;\r\n        top: 0;\r\n        width: 2px;\r\n        background-color: #eeeeee;\r\n      }\r\n    }\r\n    &:first-child {\r\n      .timeline-container-item-line {\r\n        &-content {\r\n          top: 25px;\r\n          height: calc(100% - 25px);\r\n        }\r\n      }\r\n    }\r\n    &:last-child {\r\n      .timeline-container-item-line {\r\n        &-content {\r\n          height: 25px;\r\n        }\r\n      }\r\n    }\r\n\r\n    &-content {\r\n      flex-grow: 1;\r\n      margin-left: 20px;\r\n      background-color: #f4f7fa;\r\n      padding: 8px 10px;\r\n      border-radius: 5px;\r\n      border: 1px solid #eaeef0;\r\n      margin-bottom: 30px;\r\n\r\n      &-header {\r\n        display: flex;\r\n        justify-content: space-between;\r\n        align-items: center;\r\n        height: 30px;\r\n        position: relative;\r\n\r\n        &-dot {\r\n          position: absolute;\r\n          background-color: #f4f7fa;\r\n          border-radius: 50%;\r\n          height: 13px;\r\n          width: 13px;\r\n          left: -44px;\r\n        }\r\n\r\n        p {\r\n          color: #50555a;\r\n          font-weight: 500;\r\n          white-space: nowrap;\r\n          text-overflow: ellipsis;\r\n          overflow: hidden;\r\n          max-width: 240px;\r\n        }\r\n\r\n        span {\r\n          font-size: 0.8rem;\r\n          color: #949494;\r\n          white-space: nowrap;\r\n        }\r\n      }\r\n\r\n      &-links {\r\n        display: flex;\r\n        flex-direction: column;\r\n        margin-top: 10px;\r\n        gap: 10px;\r\n        &-item {\r\n          a {\r\n            color: #2175d6;\r\n            cursor: pointer;\r\n            font-weight: 500;\r\n          }\r\n        }\r\n      }\r\n    }\r\n  }\r\n}\r\n",
+                    "styleUrl": "./timeline.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [],
+                "line": 22
+            },
+            "implements": [
+                "OnInit"
+            ],
+            "templateData": "<div class=\"timeline-container\">\r\n  <div class=\"timeline-container-item\" *ngFor=\"let item of data\">\r\n    <div class=\"timeline-container-item-line\">\r\n      <div class=\"timeline-container-item-line-content\"></div>\r\n    </div>\r\n    <div class=\"timeline-container-item-content\">\r\n      <div class=\"timeline-container-item-content-header\">\r\n        <div class=\"timeline-container-item-content-header-dot\" [ngStyle]=\"{ backgroundColor: item?.color }\"></div>\r\n        <p>{{ item?.message }}</p>\r\n        <br>\r\n        <span>\r\n          {{item?.extra}}\r\n        </span>\r\n      </div>\r\n      <div class=\"timeline-container-item-content-links\" *ngIf=\"item?.links\">\r\n        <div class=\"timeline-container-item-content-links-item\" *ngFor=\"let link of item?.links\">\r\n          <a (click)=\"link?.event(item)\">{{ link?.title }} »</a>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n"
+        },
+        {
+            "name": "UserPictureComponent",
+            "id": "component-UserPictureComponent-1679d170aa01fb1f0c573e76c3dd1adda5d2cf2a515a8b7c88c6faf9d714356e46811687e3bdce472af4c0064078c33c48cd8882203a86ab34517c7451f60437",
+            "file": "src/app/components/user-picture/user-picture.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "user-picture",
+            "styleUrls": [
+                "./user-picture.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./user-picture.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "image",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nUrl da imagem opcional\n",
+                    "description": "<p>Url da imagem opcional</p>\n",
+                    "line": 16,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "name",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nNome do usuário\n",
+                    "description": "<p>Nome do usuário</p>\n",
+                    "line": 12,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "profile",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nTipo de usuário\n",
+                    "description": "<p>Tipo de usuário</p>\n",
+                    "line": 20,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "size",
+                    "defaultValue": "'sm'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nTamanho do componente apenas  'sm' | 'md' | 'lg'\n",
+                    "description": "<p>Tamanho do componente apenas  &#39;sm&#39; | &#39;md&#39; | &#39;lg&#39;</p>\n",
+                    "line": 24,
+                    "type": "\"sm\" | \"md\" | \"lg\"",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [
+                {
+                    "name": "getNameAbb",
+                    "args": [
+                        {
+                            "name": "name",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "any",
+                    "typeParameters": [],
+                    "line": 28,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "modifierKind": [
+                        123
+                    ],
+                    "jsdoctags": [
+                        {
+                            "name": "name",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input } from '@angular/core';\n\n@Component({\n  selector: 'user-picture',\n  templateUrl: './user-picture.component.html',\n  styleUrls: ['./user-picture.component.scss']\n})\nexport class UserPictureComponent {\n  /**\n   * Nome do usuário\n  */\n  @Input() name: string = '';\n  /**\n    * Url da imagem opcional\n  */\n  @Input() image: string = '';\n  /**\n  * Tipo de usuário\n  */\n  @Input() profile: string =  '';\n  /**\n  * Tamanho do componente apenas  'sm' | 'md' | 'lg'\n  */\n  @Input() size: 'sm' | 'md' | 'lg' = 'sm';\n\n  constructor() {}\n\n  public getNameAbb(name: string) {\n    if (!name) {\n      return '';\n    }\n\n    const nameBreak = name.split(' ');\n    if (nameBreak.length === 1) {\n      return nameBreak[0].charAt(0) + nameBreak[0].charAt(1);\n    }\n    let secondName = nameBreak[1].charAt(0);\n    if (nameBreak.length >= 3) {\n      secondName =\n        nameBreak[1].length >= 3\n          ? nameBreak[1].charAt(0)\n          : nameBreak[2].charAt(0);\n    }\n    return nameBreak[0].charAt(0) + secondName;\n  }\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": ".user-picture {\n  span {\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    font-size: 20px;\n    font-weight: 600;\n    color: var(--user-picture-color, var(--primary-dark, #00a8ff));\n    text-transform: uppercase;\n  }\n\n  img,\n  span {\n    width: var(--user-picture-size, 60px);\n    height: var(--user-picture-size, 60px);\n    border-radius: 50%;\n    border: 2px solid transparent;\n    box-shadow:  0px 0px 0px 2px var(--primary-dark);\n  }\n\n  &-xs {\n    --user-picture-size: 30px;\n  }\n\n  &-sm {\n    --user-picture-size: 60px;\n  }\n\n  &-md {\n   --user-picture-size: 80px;\n  }\n\n  &-lg {\n    --user-picture-size: 120px;\n  }\n}\n",
+                    "styleUrl": "./user-picture.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [],
+                "line": 24
+            },
+            "templateData": "<div [class]=\"'user-picture user-picture-' + size\">\n  <img\n    *ngIf=\"image;else notImage\"\n    [src]=\"image\"\n    [alt]=\"name\"\n    [title]=\"name\"\n    [class.asven]=\"['asven', 'Asven', 'as', 'av'].includes(profile)\">\n  <ng-template #notImage>\n    <span [class.asven]=\"['asven', 'Asven', 'as', 'av'].includes(profile)\">{{getNameAbb(name)}}</span>\n  </ng-template>\n</div>\n"
+        }
+    ],
+    "modules": [
+        {
+            "name": "AppModule",
+            "id": "module-AppModule-2ec58e7a32463b9b6cd970cb31e08e29029a47873b1b978b2bb334fc7975f6f5b3557f06f1d8edb8d9117c1bc37b26d4301c2a5e8ccced6f4a56dde5c6a98af4",
+            "description": "",
+            "deprecationMessage": "",
+            "deprecated": false,
+            "file": "src/app/app.module.ts",
+            "methods": [],
+            "sourceCode": "import { NgModule } from '@angular/core';\nimport { BrowserModule } from '@angular/platform-browser';\n\nimport { AppComponent } from './app.component';\n\n@NgModule({\n  declarations: [\n    AppComponent\n  ],\n  imports: [\n    BrowserModule\n  ],\n  providers: [],\n  bootstrap: [AppComponent]\n})\nexport class AppModule { }\n",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": [
+                        {
+                            "name": "AppComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "imports",
+                    "elements": []
+                },
+                {
+                    "type": "exports",
+                    "elements": []
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": [
+                        {
+                            "name": "AppComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        },
+        {
+            "name": "BbAgencyCardModule",
+            "id": "module-BbAgencyCardModule-d0ca65ad46787bad37e481cb6b64c7d94045bdda4889431a9d2aef6b645bb4a4c0340ebf616b45d7ddbd7fece0fa87ad49f1c7762d98cd86d263ddb8b9eb67e4",
+            "description": "<p>Componente utilizado para exibir informações das agências no Encontre o BB, dentro do Portal 4.0.</p>\n<h3 id=\"instalação\">Instalação</h3>\n<p>Para utilizar o módulo <code>BbAgencyCardModule</code> em sua aplicação, importe da seguinte forma:</p>\n<div><pre class=\"line-numbers\"><code class=\"language-ts\">import { BbAgencyCardModule } from &#39;bb-components&#39;;\n\n&#64;NgModule({\nimports: [\n// ...\nBbAgencyCardModule,\n],\n})\nexport class AppModule { }</code></pre></div><h3 id=\"como-aplicar-no-html\"><strong>Como aplicar no HTML:</strong></h3>\n<div><pre class=\"line-numbers\"><code class=\"language-html\">&lt;bb-agency-card\nname=&quot;Agência 4268&quot;\ntel=&quot;61 40033001&quot;\naddress=&quot;SHIS, QI 5 Bloco F, Lojas 17/125 &lt;br /&gt;Centro comercial Gilberto Salomão &lt;br /&gt;Asa Norte, Brasília - DF, 70873-500&quot;\nopeningHours=&quot;Segunda a Sexta, de 10h às 15h&quot;\n[services]=&quot;[\n&#39;Saque&#39;,\n&#39;Extratos e Saldos&#39;,\n&#39;Pagamentos&#39;,\n&#39;Depósitos&#39;\n]&quot;\nmapUrl=&quot;https://goo.gl/maps/iLtQt8KAcEdpWmDU8&quot;\ntype=&quot;private&quot;\n&gt;&lt;/bb-agency-card&gt;</code></pre></div><h3 id=\"parâmetros-possíveis\">Parâmetros possíveis:</h3>\n<div><pre class=\"line-numbers\"><code class=\"language-ts\">// Nome ou número\nname: string;\n\n// Telefone com DDD\ntel?: string;\n\n// Endereço completo\naddress?: string;\n\n// Horário de funcionamento\nopeningHours?: string;\n\n// Serviços ofertados\nservices?: string[];\n\n// URL do mapa\nmapUrl?: string;\n\n// Serviços ofertados\ntype?: &#39;default&#39; | &#39;estilo&#39; | &#39;private&#39; = &#39;default&#39;;</code></pre></div><p><strong>Para conhecer mais os atributos, consulte BbAgencyCardComponent ou as variações abaixo:</strong></p>\n<iframe\n src=\"/playground-portal/agency-card\"\n style=\"min-height: 900px; width: 100%;\"\n frameborder=\"0\">\n</iframe>\n\n",
+            "deprecationMessage": "",
+            "deprecated": false,
+            "file": "src/app/components/bb-agency-card/bb-agency-card.module.ts",
+            "methods": [],
+            "sourceCode": "import { CommonModule } from '@angular/common';\nimport { NgModule } from '@angular/core';\nimport { BbAgencyCardComponent } from './bb-agency-card.component';\n\n\n/**\n * Componente utilizado para exibir informações das agências no Encontre o BB, dentro do Portal 4.0.\n *\n * ### Instalação\n *\n * Para utilizar o módulo `BbAgencyCardModule` em sua aplicação, importe da seguinte forma:\n\n```ts\nimport { BbAgencyCardModule } from 'bb-components';\n\n@NgModule({\n  imports: [\n    // ...\n    BbAgencyCardModule,\n  ],\n})\nexport class AppModule { }\n```\n *\n * ### **Como aplicar no HTML:**\n *\n```html\n<bb-agency-card\n  name=\"Agência 4268\"\n  tel=\"61 40033001\"\n  address=\"SHIS, QI 5 Bloco F, Lojas 17/125 <br />Centro comercial Gilberto Salomão <br />Asa Norte, Brasília - DF, 70873-500\"\n  openingHours=\"Segunda a Sexta, de 10h às 15h\"\n  [services]=\"[\n    'Saque',\n    'Extratos e Saldos',\n    'Pagamentos',\n    'Depósitos'\n  ]\"\n  mapUrl=\"https://goo.gl/maps/iLtQt8KAcEdpWmDU8\"\n  type=\"private\"\n></bb-agency-card>\n```\n *\n * ### Parâmetros possíveis:\n *\n```ts\n// Nome ou número\nname: string;\n\n// Telefone com DDD\ntel?: string;\n\n// Endereço completo\naddress?: string;\n\n// Horário de funcionamento\nopeningHours?: string;\n\n// Serviços ofertados\nservices?: string[];\n\n// URL do mapa\nmapUrl?: string;\n\n// Serviços ofertados\ntype?: 'default' | 'estilo' | 'private' = 'default';\n```\n *\n * **Para conhecer mais os atributos, consulte BbAgencyCardComponent ou as variações abaixo:**\n *\n * <iframe\n *  src=\"/playground-portal/agency-card\"\n *  style=\"min-height: 900px; width: 100%;\"\n *  frameborder=\"0\">\n * </iframe>\n *\n */\n@NgModule({\n  declarations: [BbAgencyCardComponent],\n  exports: [BbAgencyCardComponent],\n  imports: [CommonModule],\n})\nexport class BbAgencyCardModule {}\n",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": [
+                        {
+                            "name": "BbAgencyCardComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "imports",
+                    "elements": []
+                },
+                {
+                    "type": "exports",
+                    "elements": [
+                        {
+                            "name": "BbAgencyCardComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        },
+        {
+            "name": "BbReceptiveFaqModule",
+            "id": "module-BbReceptiveFaqModule-75f58c5abd1a3c3819ad54065da611a4d494890f012b07a3b4a7b0327041f7d5528d6e41a8d7961022fca871675400afc4bf21c71b32c8a2544ff93ce39cdaf8",
+            "description": "<p>Componente utilizado para adicionar uma seção de perguntas dentro do receptivo do Portal 4.0.</p>\n<h3 id=\"instalação\">Instalação</h3>\n<p>Para utilizar o módulo <code>BbReceptiveFaqModule</code> em sua aplicação, importe da seguinte forma:</p>\n<div><pre class=\"line-numbers\"><code class=\"language-ts\">import { BbReceptiveFaqModule } from &#39;bb-components&#39;;\n\n&#64;NgModule({\nimports: [\n// ...\nBbReceptiveFaqModule,\n],\n})\nexport class AppModule { }</code></pre></div><h3 id=\"como-utilizar\">Como utilizar</h3>\n<div><pre class=\"line-numbers\"><code class=\"language-ts\">questionsList: Array&lt;object&gt; = [\n{\nquestion: &#39;Perguntas Frequentes sobre a Conta PJ Digital&#39;,\nanswer: &#39;No momento, está disponível apenas para empresa com um sócio (EI, MEI e EIRELI)&#39;\n},\n{\nquestion: &#39;Posso abrir mais de uma conta para minha empresa?&#39;,\nanswer: &#39;No momento, está disponível apenas para empresa com um sócio (EI, MEI e EIRELI)&#39;\n},\n{\nquestion: &#39;Já tenho uma solicitação de abertura de conta empresa. E agora?&#39;,\nanswer: &#39;No momento, está disponível apenas para empresa com um sócio (EI, MEI e EIRELI)&#39;\n},\n{\nquestion: &#39;Posso aderir à Cesta de Benefícios com isenção de 3 meses a qualquer momento? &#39;,\nanswer: &#39;No momento, está disponível apenas para empresa com um sócio (EI, MEI e EIRELI)&#39;\n}\n];</code></pre></div><p>Como aplicar no HTML:</p>\n<div><pre class=\"line-numbers\"><code class=\"language-html\">&lt;bb-receptive-faq\ndataTitle=&quot;Perguntas Frequentes sobre a Conta PJ Digital&quot;\nbackground=&quot;/assets/images/receptivos/pj/faq-bg.png&quot;\nbackgroundMobile=&quot;/assets/images/receptivos/pj/faq-bg-mobile.png&quot;\ntype=&quot;default&quot;\n[faqQuestions]=&quot;questionsList&quot;\nbgColor=&quot;#F4F4F8&quot;\ndataDescription=&quot;Descrição do FAQ&quot;\ncolorTitle=&quot;#465EFF&quot;\n[limitVisible]=&quot;4&quot;\nbgContainerColor=&quot;#FFFFFF&quot;\nquestionColor=&quot;#212227&quot;\nanswerColor=&quot;#53565F&quot;\narrowColor=&quot;#585B65&quot;\nitemColor=&quot;#FFFFFF&quot;\nlineColor=&quot;#e7e7e7&quot;\nlinkColor=&quot;#465EFF&quot;\nseeMoreColor=&quot;#465EFF&quot;\n&gt;&lt;/bb-receptive-faq&gt;</code></pre></div><p>Parâmetros possíveis:</p>\n<div><pre class=\"line-numbers\"><code class=\"language-ts\">// Título do bloco de FAQ\ndataTitle: string;\n\n// descricao do bloco de FAQ\ndataDescription: string;\n\n// Cor do título do bloco de FAQ\ncolorTitle?: string;\n\n// Lista de perguntas\nfaqQuestions: Array&lt;object&gt;;\n\n// Limite de perguntas visiveis na primeira visualização\nlimitVisible = 4;\n\n// Caminho para imagem de background\nbackground: string;\n\n// Caminho para imagem de background\nbackgroundMobile: string;\n\n// Define a exibição da lista de perguntas\ntype?: &#39;default&#39; | &#39;full&#39; = &#39;default&#39;;\n\n// Define a cor de fundo do faq\nbgColor?: string;\n\n// Define a cor do container das perguntas\nbgContainerColor?: string;\n\n// Define a cor da pergunta\nquestionColor?: string;\n\n// Define a cor da resposta\nanswerColor?: string;\n\n// Define a cor da seta\narrowColor?: string;\n\n// Define a cor de fundo do item\nitemColor?: string;\n\n// Define a cor da borda\nlineColor?: string;\n\n// Define a cor dos links\nlinkColor?: string;\n\n// Define a cor do veja mais\nseeMoreColor?: string;</code></pre></div><p>Para conhecer mais os atributos, consulte BbReceptiveFaqComponent ou as variações abaixo:</p>\n<h3 id=\"variações\">Variações</h3>\n<iframe\n src=\"/playground-portal/receptive-faq\"\n style=\"min-height: 700px; width: 100%;\"\n frameborder=\"0\">\n</iframe>\n\n",
+            "deprecationMessage": "",
+            "deprecated": false,
+            "file": "src/app/components/bb-receptive-faq/bb-receptive-faq.module.ts",
+            "methods": [],
+            "sourceCode": "import { CommonModule } from '@angular/common';\nimport { NgModule } from '@angular/core';\nimport { RouterModule } from '@angular/router';\n\n\n\nimport { BbReceptiveFaqComponent } from './bb-receptive-faq.component';\n\n/**\n * Componente utilizado para adicionar uma seção de perguntas dentro do receptivo do Portal 4.0.\n *\n * ### Instalação\n *\n * Para utilizar o módulo `BbReceptiveFaqModule` em sua aplicação, importe da seguinte forma:\n\n```ts\nimport { BbReceptiveFaqModule } from 'bb-components';\n\n@NgModule({\n  imports: [\n    // ...\n    BbReceptiveFaqModule,\n  ],\n})\nexport class AppModule { }\n```\n *\n * ### Como utilizar\n *\n```ts\nquestionsList: Array<object> = [\n  {\n    question: 'Perguntas Frequentes sobre a Conta PJ Digital',\n    answer: 'No momento, está disponível apenas para empresa com um sócio (EI, MEI e EIRELI)'\n  },\n  {\n    question: 'Posso abrir mais de uma conta para minha empresa?',\n    answer: 'No momento, está disponível apenas para empresa com um sócio (EI, MEI e EIRELI)'\n  },\n  {\n    question: 'Já tenho uma solicitação de abertura de conta empresa. E agora?',\n    answer: 'No momento, está disponível apenas para empresa com um sócio (EI, MEI e EIRELI)'\n  },\n  {\n    question: 'Posso aderir à Cesta de Benefícios com isenção de 3 meses a qualquer momento? ',\n    answer: 'No momento, está disponível apenas para empresa com um sócio (EI, MEI e EIRELI)'\n  }\n];\n```\n *\n * Como aplicar no HTML:\n *\n```html\n<bb-receptive-faq\n  dataTitle=\"Perguntas Frequentes sobre a Conta PJ Digital\"\n  background=\"/assets/images/receptivos/pj/faq-bg.png\"\n  backgroundMobile=\"/assets/images/receptivos/pj/faq-bg-mobile.png\"\n  type=\"default\"\n  [faqQuestions]=\"questionsList\"\n  bgColor=\"#F4F4F8\"\n  dataDescription=\"Descrição do FAQ\"\n  colorTitle=\"#465EFF\"\n  [limitVisible]=\"4\"\n  bgContainerColor=\"#FFFFFF\"\n  questionColor=\"#212227\"\n  answerColor=\"#53565F\"\n  arrowColor=\"#585B65\"\n  itemColor=\"#FFFFFF\"\n  lineColor=\"#e7e7e7\"\n  linkColor=\"#465EFF\"\n  seeMoreColor=\"#465EFF\"\n></bb-receptive-faq>\n```\n *\n * Parâmetros possíveis:\n *\n```ts\n// Título do bloco de FAQ\ndataTitle: string;\n\n// descricao do bloco de FAQ\ndataDescription: string;\n\n// Cor do título do bloco de FAQ\ncolorTitle?: string;\n\n// Lista de perguntas\nfaqQuestions: Array<object>;\n\n// Limite de perguntas visiveis na primeira visualização\nlimitVisible = 4;\n\n// Caminho para imagem de background\nbackground: string;\n\n// Caminho para imagem de background\nbackgroundMobile: string;\n\n// Define a exibição da lista de perguntas\ntype?: 'default' | 'full' = 'default';\n\n// Define a cor de fundo do faq\nbgColor?: string;\n\n// Define a cor do container das perguntas\nbgContainerColor?: string;\n\n// Define a cor da pergunta\nquestionColor?: string;\n\n// Define a cor da resposta\nanswerColor?: string;\n\n// Define a cor da seta\narrowColor?: string;\n\n// Define a cor de fundo do item\nitemColor?: string;\n\n// Define a cor da borda\nlineColor?: string;\n\n// Define a cor dos links\nlinkColor?: string;\n\n// Define a cor do veja mais\nseeMoreColor?: string;\n```\n *\n * Para conhecer mais os atributos, consulte BbReceptiveFaqComponent ou as variações abaixo:\n *\n * ### Variações\n *\n * <iframe\n *  src=\"/playground-portal/receptive-faq\"\n *  style=\"min-height: 700px; width: 100%;\"\n *  frameborder=\"0\">\n * </iframe>\n *\n */\n@NgModule({\n  declarations: [BbReceptiveFaqComponent],\n  exports: [BbReceptiveFaqComponent],\n  imports: [CommonModule, RouterModule],\n})\nexport class BbReceptiveFaqModule {}\n",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": [
+                        {
+                            "name": "BbReceptiveFaqComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "imports",
+                    "elements": []
+                },
+                {
+                    "type": "exports",
+                    "elements": [
+                        {
+                            "name": "BbReceptiveFaqComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        }
+    ],
+    "miscellaneous": {
+        "variables": [
+            {
+                "name": "context",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/test.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "require.context('./', true, /\\.spec\\.ts$/)"
+            },
+            {
+                "name": "environment",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/environments/environment.prod.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "object",
+                "defaultValue": "{\n  production: true\n}"
+            },
+            {
+                "name": "environment",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/environments/environment.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "object",
+                "defaultValue": "{\n  production: false\n}"
+            },
+            {
+                "name": "Principal",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/components/card-elastic/card-elastic.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "require",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/test.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "literal type"
+            },
+            {
+                "name": "Simples",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/components/card-elastic/card-elastic.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "TemplateSimples.bind({})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/components/card-elastic/card-elastic.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<CardElasticComponent>",
+                "defaultValue": "(args: CardElasticComponent) => ({\n  props: args,\n  template: `\n    <app-card-elastic\n      [title]=\"title\"\n      [subTitle]=\"subTitle\"\n      [buttonVisible]=\"buttonVisible\"\n      [hasDropdown]=\"hasDropdown\"\n      [statusDropDown]=\"statusDropDown\"\n    >\n      <ng-container description>\n        <span [innerHtml]=\"description\"></span>\n      </ng-container>\n    </app-card-elastic>\n  `,\n})"
+            },
+            {
+                "name": "TemplateSimples",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/components/card-elastic/card-elastic.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<CardElasticComponent>",
+                "defaultValue": "(args: CardElasticComponent) => ({\n  props: args,\n  title: 'CAP 60',\n  template: `\n    <app-card-elastic [hasDropdown]=\"false\" [title]=\"title\" [subTitle]=\"subTitle\"></app-card-elastic>\n  `,\n})"
+            }
+        ],
+        "functions": [],
+        "typealiases": [],
+        "enumerations": [],
+        "groupedVariables": {
+            "src/test.ts": [
+                {
+                    "name": "context",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/test.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "require.context('./', true, /\\.spec\\.ts$/)"
+                },
+                {
+                    "name": "require",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/test.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "literal type"
+                }
+            ],
+            "src/environments/environment.prod.ts": [
+                {
+                    "name": "environment",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/environments/environment.prod.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "object",
+                    "defaultValue": "{\n  production: true\n}"
+                }
+            ],
+            "src/environments/environment.ts": [
+                {
+                    "name": "environment",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/environments/environment.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "object",
+                    "defaultValue": "{\n  production: false\n}"
+                }
+            ],
+            "src/app/components/card-elastic/card-elastic.stories.ts": [
+                {
+                    "name": "Principal",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/components/card-elastic/card-elastic.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Simples",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/components/card-elastic/card-elastic.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "TemplateSimples.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/components/card-elastic/card-elastic.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<CardElasticComponent>",
+                    "defaultValue": "(args: CardElasticComponent) => ({\n  props: args,\n  template: `\n    <app-card-elastic\n      [title]=\"title\"\n      [subTitle]=\"subTitle\"\n      [buttonVisible]=\"buttonVisible\"\n      [hasDropdown]=\"hasDropdown\"\n      [statusDropDown]=\"statusDropDown\"\n    >\n      <ng-container description>\n        <span [innerHtml]=\"description\"></span>\n      </ng-container>\n    </app-card-elastic>\n  `,\n})"
+                },
+                {
+                    "name": "TemplateSimples",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/components/card-elastic/card-elastic.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<CardElasticComponent>",
+                    "defaultValue": "(args: CardElasticComponent) => ({\n  props: args,\n  title: 'CAP 60',\n  template: `\n    <app-card-elastic [hasDropdown]=\"false\" [title]=\"title\" [subTitle]=\"subTitle\"></app-card-elastic>\n  `,\n})"
+                }
+            ]
+        },
+        "groupedFunctions": {},
+        "groupedEnumerations": {},
+        "groupedTypeAliases": {}
+    },
+    "routes": [],
+    "coverage": {
+        "count": 14,
+        "status": "low",
+        "files": [
+            {
+                "filePath": "src/app/app.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "AppComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/2",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/components/bb-agency-card/bb-agency-card.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "BbAgencyCardComponent",
+                "coveragePercent": 80,
+                "coverageCount": "8/10",
+                "status": "very-good"
+            },
+            {
+                "filePath": "src/app/components/bb-receptive-faq/bb-receptive-faq.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "BbReceptiveFaqComponent",
+                "coveragePercent": 100,
+                "coverageCount": "22/22",
+                "status": "very-good"
+            },
+            {
+                "filePath": "src/app/components/card-elastic/card-elastic.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "CardElasticComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/8",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/components/card-elastic/card-elastic.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Principal",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/components/card-elastic/card-elastic.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Simples",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/components/card-elastic/card-elastic.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/components/card-elastic/card-elastic.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "TemplateSimples",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/components/timeline/timeline.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "CustomTimelineComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/5",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/components/timeline/timeline.component.ts",
+                "type": "interface",
+                "linktype": "interface",
+                "name": "ITimelineInterface",
+                "coveragePercent": 0,
+                "coverageCount": "0/5",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/components/timeline/timeline.component.ts",
+                "type": "interface",
+                "linktype": "interface",
+                "name": "ITimelineInterfaceLink",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/components/user-picture/user-picture.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "UserPictureComponent",
+                "coveragePercent": 57,
+                "coverageCount": "4/7",
+                "status": "good"
+            },
+            {
+                "filePath": "src/environments/environment.prod.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "environment",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/environments/environment.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "environment",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/test.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "context",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/test.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "require",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            }
+        ]
+    }
+}

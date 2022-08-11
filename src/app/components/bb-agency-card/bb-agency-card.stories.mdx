@@ -1,0 +1,55 @@
+import { Meta, Preview, Story } from '@storybook/addon-docs/blocks';
+import { moduleMetadata } from '@storybook/angular';
+import { BbAgencyCardComponent } from './bb-agency-card.component';
+import { BbAgencyCardModule } from './bb-agency-card.module';
+
+<Meta
+  title="Componente / Agência card"
+  component={BbAgencyCardComponent}
+  decorators={[
+    moduleMetadata({
+      imports: [BbAgencyCardModule],
+    })
+  ]}
+/>
+
+
+
+
+
+export const Default = (args) => ({
+  props: args,
+  template: `
+  <bb-agency-card
+    [name]="name"
+    [tel]="tel"
+    [address]="address"
+    [openingHours]="openingHours"
+    [services]="services"
+    [mapUrl]="mapUrl"
+    [type]="type"
+  ></bb-agency-card>
+  `
+})
+
+<Preview>
+  <Story
+    name="Simples"
+    args={{
+      services: [
+        'Saque',
+        'Extratos e Saldos',
+        'Pagamentos',
+        'Depósitos'
+      ],
+      type: 'estilo',
+      openingHours: 'Segunda a Sexta, de 10h às 15h',
+      tel: '61 40033001',
+      address: 'SHIS, QI 5 Bloco F, Lojas 17/125 <br />Centro comercial Gilberto Salomão <br />Asa Norte, Brasília - DF, 70873-500',
+      mapUrl: 'https://goo.gl/maps/iLtQt8KAcEdpWmDU8',
+      name: 'Estilo'
+    }}
+  >
+    {Default.bind()}
+  </Story>
+</Preview>

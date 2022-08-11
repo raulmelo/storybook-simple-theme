@@ -1,0 +1,148 @@
+
+import { Meta, Story, Props, Preview } from '@storybook/addon-docs/blocks';
+
+<Meta title='CSS / Button'/>
+
+# Transparent
+
+Para adicionar botões sem cor de fundo.
+* .bt-outline
+
+```js
+<button class="bt bt-sm bg-primary bt-outline">Botão</button>
+```
+
+export const myStyles = [
+`.group-buttons button {
+    margin-left: 20px
+  }
+  .group-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+  }
+`]
+
+
+
+<Preview>
+  <Story name="Transparent" height="150px">{{
+    styles: myStyles,
+    template: `
+    <div class="group-buttons">
+      <button class="bt bt-md bg-primary bt-radius bt-outline">Botão</button>
+      <button class="bt bt-md bg-secondary bt-radius bt-outline">Botão</button>
+      <button class="bt bt-md bg-third bt-radius bt-outline">Botão</button>
+      <button class="bt bt-md bg-gray bt-radius bt-outline">Botão</button>
+    </div>
+    `
+  }}
+  </Story>
+</Preview>
+
+# Botão em loading
+
+Para simular ação de loading no botão adiciona a seguinte classe css
+* .loading
+
+```js
+<button class="bt bt-sm bg-primary loading">Botão</button>
+```
+
+
+<Preview>
+  <Story name="Botão em loading" height="150px">{{
+    styles: myStyles,
+    template: `
+    <div class="group-buttons">
+      <button class="bt bt-md bg-primary bt-radius bt-outline loading">Botão</button>
+      <button class="bt bt-md bg-secondary bt-radius loading">Botão</button>
+      <button class="bt bt-md bg-primary loading">Botão</button>
+    </div>
+    `
+  }}
+  </Story>
+</Preview>
+
+# Botão com ícone
+
+Para adicionar botão com ícone botão adiciona a seguinte classe css
+* .bt-icon
+
+```js
+  <button class="bt bt-md bt-icon bg-primary bt-radius">
+    Botão
+    <i class="icon-megafone"></i>
+  </button>
+```
+
+
+<Preview>
+  <Story name="Botão com ícone" height="150px">{{
+    styles: myStyles,
+    template: `
+    <div class="group-buttons">
+      <button class="bt bt-xs bt-icon bg-primary bt-radius bt-outline">Botão <i class="icon-megafone"></i></button>
+      <button class="bt bt-sm bt-icon bg-primary bt-radius bt-outline">Botão <i class="icon-megafone"></i></button>
+      <button class="bt bt-md bt-icon bg-primary bt-radius">Botão <i class="icon-megafone"></i></button>
+      <button class="bt bt-lg bt-icon bg-primary bt-radius">Botão <i class="icon-megafone"></i></button>
+    </div>
+    `
+  }}
+  </Story>
+</Preview>
+
+# Botão com ícone circle
+O botão circle é um tipo de botão arredondado e com um ícone para demonstrar o componente
+deve adicionar algumas tags por conta de acessibilidade como _alt_, _title_ e _role_
+
+* .bt-circle
+
+```js
+  <button class="bt bt-lg bt-circle bg-primary">
+    <i class="icon-megafone"></i>
+  </button>
+```
+
+
+<Preview>
+  <Story name="Botão com ícone circle" height="150px">{{
+    styles: myStyles,
+    template: `
+    <div class="group-buttons">
+      <button class="bt bt-sm bt-circle bg-primary bt-outline"><i class="icon-megafone"></i></button>
+      <button class="bt bt-md bt-circle bg-primary"><i class="icon-megafone"></i></button>
+      <button class="bt bt-lg bt-circle bg-primary"><i class="icon-megafone"></i></button>
+    </div>
+    `
+  }}
+  </Story>
+</Preview>
+
+
+# Botão Label
+O botão label foi criado com intuito de representar tags ou elementos dentro de cards que executam determinadas ações, para ser usado no botão tem que adicionar a seguinte classe no *button*.;
+
+* .bt-label
+
+```js
+  <button class="bt bt-lg bt-label bt-radius bg-secondary bt-outline">ver checklist</button>
+```
+
+<Preview>
+  <Story name="Botão label" height="150px">
+  {{
+    styles: myStyles,
+    template: `
+    <div class="group-buttons">
+      <button class="bt bt-sm bt-label bt-radius bg-gray bt-outline">ver checklist</button>
+      <button class="bt bt-md bt-label bt-radius bg-primary bt-outline">ver checklist</button>
+      <button class="bt bt-lg bt-label bt-radius bg-secondary bt-outline">ver checklist</button>
+    </div>
+    `
+  }}
+  </Story>
+</Preview>
+
+

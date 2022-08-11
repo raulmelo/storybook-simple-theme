@@ -1,0 +1,244 @@
+@import "~@bb-design-system/tokens/dist/serotonina/tokens";
+
+.bb-receptive-faq {
+  background-color: var(--bg-color, #f4f4f8);
+
+  @media (max-width: 991px) {
+    padding-bottom: $bbds-size-space-xlarge;
+  }
+
+  @media (min-width: 992px) {
+    padding: $bbds-size-space-xlarge 0;
+  }
+
+  .col-16 {
+    padding: 0;
+  }
+
+  h2.bb-header-xlarge {
+    color: var(--title-color, #465eff);
+    font-size: $bbds-size-font-scale-7;
+    line-height: $bbds-textstyle-title-small-lineheight-web;
+    font-family: "BancoDoBrasilTitulos-Regular";
+    font-display: swap;
+  }
+
+  .content-area {
+    @media (max-width: 480px) {
+      .background img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+
+    @media (max-width: 671px) {
+      .faq {
+        width: calc(100% - 16px);
+      }
+    }
+
+    @media (min-width: 672px) and (max-width: 991px) {
+      .faq {
+        width: calc(100% - 32px);
+      }
+    }
+
+    @media (max-width: 991px) {
+      display: flex;
+      flex-flow: column wrap;
+      justify-content: flex-start;
+      align-items: center;
+
+      .background {
+        width: 100%;
+        text-align: center;
+
+        img {
+          max-width: 100%;
+        }
+      }
+
+      .faq {
+        margin-top: -30%;
+      }
+    }
+
+    @media (min-width: 992px) {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: flex-start;
+      align-items: flex-start;
+
+      .background,
+      .faq {
+        min-width: 65%;
+      }
+
+      .background img {
+        border-radius: 16px;
+        filter: drop-shadow(0 6px 8px rgba(24, 24, 27, 0.06))
+          drop-shadow(0 1px 4px rgba(24, 24, 27, 0.08))
+          drop-shadow(0 0 1px rgba(24, 24, 27, 0.08));
+      }
+
+      .faq {
+        margin-top: 34px;
+        transform: translateX(-47.3%);
+        border-radius: 8px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .background {
+        height: 364px;
+      }
+    }
+
+    .faq {
+      background-color: var(--bg-container-color, #ffffff);
+      // background-color: $bbds-color-background-default;
+      padding: $bbds-size-space-xlarge;
+    }
+  }
+
+  &__hide-faq {
+    max-height: 0;
+    pointer-events: none;
+    overflow: hidden;
+    margin-bottom: -2px;
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: none;
+
+    @for $i from 1 through 30 {
+      &:nth-child(#{$i + 4}) {
+        transition-delay: #{$i * 0.1}s;
+      }
+    }
+  }
+
+  &__show-faq {
+    opacity: 1;
+    max-height: none;
+    pointer-events: all;
+    margin-bottom: $bbds-size-space-small;
+    transform: translateX(0);
+    transition: opacity 0.3s ease-out, transform 0.2s ease-out;
+  }
+
+  bb-accordion-item {
+    background: var(--item-color, #ffffff);
+    border-width: 0 0 1px 0;
+    border-radius: 0;
+    margin: 0;
+    border-color: var(--line-color, #e7e7e7);
+
+    &:hover,
+    &.collapsed,
+    &.expanded {
+      background: var(--item-color, #ffffff);
+    }
+
+    &.expanded {
+      &:hover {
+        background: var(--item-color, #ffffff);
+      }
+    }
+
+    &-header {
+      background: var(--item-color, #ffffff);
+      padding-left: 16px;
+      padding-right: 16px;
+
+      ::ng-deep {
+        button {
+          bb-icon {
+            color: var(--arrow-color, #585b65);
+          }
+          color: var(--arrow-color, #585b65);
+        }
+      }
+    }
+
+    &-body {
+      // padding-left: 16px;
+      // padding-right: 16px;
+    }
+
+    &-header,
+    &-body ::ng-deep .item-body {
+      color: var(--awnswer-color, #53565f);
+      border-width: 0;
+      // padding-left: 0;
+      // padding-right: 0;
+    }
+
+    &-header {
+      color: var(--question-color, #212227);
+      padding-top: 16px;
+      padding-bottom: 16px;
+    }
+
+    &-body ::ng-deep .item-body * {
+      font: inherit;
+      color: inherit;
+      line-height: inherit;
+    }
+
+    &-body ::ng-deep .item-body a {
+      color: var(--link-color, #465eff);
+    }
+
+    button {
+      bb-icon {
+        ::ng-deep {
+          color: var(--arrow-color, #585b65);
+        }
+      }
+    }
+
+    // &:hover,
+    // &:focus,
+    // &:active{
+    //   background:var(--item-color);
+    // }
+  }
+  .description {
+    font-size: 14px;
+    line-height: 19px;
+    color: #585b65;
+    @media (min-width: 992px) {
+      font-size: 18px;
+      line-height: 28px;
+    }
+  }
+
+  &.full {
+    .background {
+      display: none;
+    }
+
+    .content-area {
+      flex-flow: column;
+      width: 100%;
+
+      .faq {
+        transform: translateX(0);
+        width: 100%;
+      }
+    }
+  }
+
+  bb-link-nav {
+    ::ng-deep {
+      a {
+        color: var(--seemore-color, #465eff);
+      }
+      bb-icon {
+        color: var(--seemore-color, #465eff);
+      }
+    }
+  }
+}

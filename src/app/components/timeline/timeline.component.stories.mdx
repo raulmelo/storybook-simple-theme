@@ -1,0 +1,63 @@
+import { CommonModule } from '@angular/common';
+import { Meta, Preview, Story } from '@storybook/addon-docs/blocks';
+import { moduleMetadata } from '@storybook/angular';
+import { CustomTimelineComponent } from './timeline.component';
+
+<Meta
+  title="Componente / Timeline"
+  component={CustomTimelineComponent}
+  argTypes={{
+    variant: {
+      options: ['primary', 'secondary'],
+      control: { type: 'radio' }
+    },
+    data: {
+      description: 'Array de objetos con la información de los eventos',
+      defaultValue: [
+        {
+          status: 'success',
+          startDateStatus: '2019-01-01',
+          color: '#00bcd4'
+        }
+      ],
+      control: {
+        type: 'object',
+      }
+    }
+  }}
+  decorators={[
+    moduleMetadata({
+      declarations: [CustomTimelineComponent],
+      imports: [CommonModule],
+    })
+  ]}
+/>
+
+
+
+
+
+export const Default = (args) => ({
+  props: args,
+  template: `
+    <app-custom-timeline [data]="data"></app-custom-timeline>
+  `
+})
+
+<Preview>
+  <Story
+    name="Simples"
+    args={{
+      data: [
+        {
+          message: 'Evento 1',
+          status: 'success',
+          extra: '28/08/2022',
+          color: '#00bcd4'
+        }
+      ],
+    }}
+  >
+    {Default.bind()}
+  </Story>
+</Preview>

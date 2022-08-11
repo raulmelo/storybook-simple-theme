@@ -1,0 +1,71 @@
+<div class="bb-receptive-faq" [class.full]="type == 'full'" [style]="getGeneralCssVars">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-16 col-lg-14">
+        <div class="content-area">
+          <div class="background" *ngIf="type != 'full'">
+            <picture>
+              <source
+                media="(max-width: 479px)"
+                [srcset]="backgroundMobile"
+                width="360"
+                height="360"
+              />
+              <source
+                media="(min-width: 480px)"
+                [srcset]="background"
+                width="620"
+                height="560"
+              />
+              <img [src]="background" [alt]="backgroundAlt ? backgroundAlt : 'Faq - '+ title" />
+            </picture>
+          </div>
+          <div class="faq">
+            <h2 class="bb-header-xlarge" [innerHtml]="title"></h2>
+            <div class="description" [innerHtml]="description" ></div>
+
+            <bb-accordion class="mb-4" data-bb-acao="duvidas">
+              <bb-accordion-item
+                *ngFor="let item of faqQuestions; let i = index"
+                [ngClass]="{
+                  'bb-receptive-faq__hide-faq': i > limitVisible - 1,
+                  'bb-receptive-faq__show-faq': showHiddenQuestions
+                }"
+              >
+                <bb-accordion-item-header
+                  [attr.data-bb-rotulo]="item.question"
+                >
+                  {{ item.question }}
+                </bb-accordion-item-header>
+                <bb-accordion-item-body>
+                  <div [innerHtml]="item.answer" [attr.data-bb-rotulo]="item.question"></div>
+                  <p *ngIf="item.moreUrl">
+                    <a [href]="item.moreUrl" target="_blank" [title]="item.moreText">{{
+                      item.moreText ? item.moreText : "Saiba +"
+                    }}</a>
+                  </p>
+                </bb-accordion-item-body>
+              </bb-accordion-item>
+            </bb-accordion>
+
+            <bb-link-nav
+              [icon]="showHiddenQuestions ? 'chevron-up' : 'chevron-down'"
+              iconAlign="right"
+              data-bb-acao="duvidas"
+              [attr.data-bb-rotulo]="!showHiddenQuestions ? 'Ver mais perguntas' : 'Ver menos perguntas'"
+              *ngIf="faqQuestions.length > limitVisible"
+            >
+              <a href="javascript:void(0);" class="see-more" (click)="toggleMoreQuestions()">
+                {{
+                  !showHiddenQuestions
+                    ? "Ver mais perguntas"
+                    : "Ver menos perguntas"
+                }}
+              </a>
+            </bb-link-nav>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

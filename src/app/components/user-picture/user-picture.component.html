@@ -1,0 +1,11 @@
+<div [class]="'user-picture user-picture-' + size">
+  <img
+    *ngIf="image;else notImage"
+    [src]="image"
+    [alt]="name"
+    [title]="name"
+    [class.asven]="['asven', 'Asven', 'as', 'av'].includes(profile)">
+  <ng-template #notImage>
+    <span [class.asven]="['asven', 'Asven', 'as', 'av'].includes(profile)">{{getNameAbb(name)}}</span>
+  </ng-template>
+</div>

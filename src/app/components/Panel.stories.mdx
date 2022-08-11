@@ -1,0 +1,36 @@
+import { Meta, Story, Props, Preview } from '@storybook/addon-docs/blocks';
+
+<Meta title='CSS | Panel' />
+
+
+
+# Panel
+
+```html
+<div class="panel panel-default">
+  <div class="panel-body">
+    conteúdo
+  </div>
+</div>
+```
+
+
+<Preview>
+  <Story name='Padrão' height='300px'>{{
+    template: `
+      <div class="flex items-center justify-center mt-20">
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <h3 class="ft-md">Tittle panel</h3>
+            <p class="mt-10 cl-primary">Mussum Ipsum, cacilds vidis litro <br/> abertis bibendum egestas augue arcu ut est.</p>
+            <p class="ft-sm" >
+              <i class="icon icon-pessoas ml-10"></i>
+              <i class="icon icon-edit ml-10"></i>
+              <i class="icon icon-heart ml-10"></i>
+            </p>
+          </div>
+        </div>
+      </div>
+    `,
+  }}</Story>
+</Preview>

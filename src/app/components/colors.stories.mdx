@@ -1,0 +1,87 @@
+import {
+  Meta,
+  ColorPalette,
+  ColorItem,
+  Typeset,
+} from "@storybook/addon-docs/blocks";
+
+
+<Meta title="Introduction" />
+
+# Introduction
+
+This project uses Tailwindcss so a lot of colour props are passed in as CSS classes that
+Tailwind applies styling to i.e. `text-blue-500` to use the primary blue. You can find the
+full colour palette [here](https://tailwindcss.com/docs/customizing-colors/#default-color-palette).
+
+## Colours
+
+### Light Theme
+
+<ColorPalette>
+  <ColorItem
+    title="theme.color.background"
+    subtitle="White"
+    colors={"#D7E3FC"}
+  />
+  <ColorItem
+    title="theme.color.text"
+    subtitle="Black"
+    colors={"#D7E3FC"}
+  />
+  <ColorItem
+    title="theme.color.header"
+    subtitle="Grey"
+    colors={"#D7E3FC"}
+  />
+</ColorPalette>
+
+### Dark Theme
+
+<ColorPalette>
+  <ColorItem
+    title="theme.color.background"
+    subtitle="White"
+    colors={"#D7E3FC"}
+  />
+  <ColorItem
+    title="theme.color.text"
+    subtitle="White"
+    colors={"#D7E3FC"}
+  />
+  <ColorItem
+    title="theme.color.header"
+    subtitle="Grey"
+    colors={"#D7E3FC"}
+  />
+</ColorPalette>
+
+### Shared
+
+<ColorPalette>
+  <ColorItem
+    title="theme.color.primary"
+    subtitle="Blue"
+    colors={"#D7E3FC"}
+  />
+  <ColorItem
+    title="theme.color.secondary"
+    subtitle="Orange"
+    colors={"#D7E3FC"}
+  />
+  <ColorItem
+    title="theme.color.tertiary"
+    subtitle="Grey"
+    colors={"#D7E3FC"}
+  />
+
+</ColorPalette>
+
+## Typography
+
+### Header
+
+**Font**: Inter
+**Weight**: 900
+
+<Typeset fontFamily="Inter" fontSizes={[10, 20, 30, 40, 50]} fontWeight={900} />

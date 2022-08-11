@@ -1,0 +1,137 @@
+import { Meta, Preview, Story } from '@storybook/addon-docs/blocks';
+
+import { moduleMetadata } from '@storybook/angular';
+import { UserPictureComponent } from './user-picture.component';
+
+<Meta
+  title='Componente / Avatar'
+  component={UserPictureComponent}
+  argType={{
+    size: {
+      defaultValue: 'size',
+      Description: 'Tipo de usuario',
+      options: ['sm', 'md', 'lg'],
+      control: { type: 'radio' }
+    },
+    variant: {
+      options: ['primary', 'secondary'],
+      control: { type: 'radio' }
+    }
+  }}
+  decorators={[
+    moduleMetadata({
+      declarations: [UserPictureComponent]
+    })
+  ]}
+/>
+
+### Observação
+  Importar o modulo Design Kit no seu module.
+
+  no seu modulo
+```jsx
+  imports: [
+    DesignKitModule
+  ]
+```
+
+
+# Simples
+
+O user picture é um componente de avatar de acordo com a imagem passada se o não tiver imagem ele traz as iniciais do nome do usuário passado
+
+```html
+  <user-picture size="sm" name="Raul Melo" image="https:minhasimagem.url.com" profile="Asven"></user-picture>
+```
+
+export const Default = (args) => ({
+  props: args,
+  template: `
+    <user-picture [size]="size" [name]="name" [image]="image"></user-picture>
+  `
+})
+
+<Preview>
+  <Story
+    name='Playground'
+    args={{
+      name: 'Raul Melo',
+      image: "https://images.generated.photos/u9WhSmk-gb8bJYCdJhck-utL2AA3R4KIKcPI92VWnBw/rs:fit:256:256/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LnBob3Rvcy92M18w/MjE5NzI2LmpwZw.jpg",
+      size: 'md'
+    }}
+    >
+    {Default.bind()}
+  </Story>
+</Preview>
+
+
+
+__
+```js
+## Props
+@Input() name: string;
+@Input() image: string;
+@Input() profile: string = 'asven';
+@Input() size: 'sm' | 'md' | 'lg' = 'sm';
+```
+
+| PROP | Type | Default | Descr |
+| -    |  -   |    -    | -     |
+| name | string | null | essa propriedade serve para que se a imagem não for renderizada ele mostra o nome abreviado
+| image | string | null | link da imagem que sera mostrada como avatar |
+| profile | string | asven | por padrão vem com as cores padrões do asven, porem pode passar outras propriedades e custumizar da sua forma
+| size  | 'sm', 'md', 'lg' | sm | Tamanhos já definidos para o componente
+
+
+# Imagem
+| PROP | Type | Default | Descr |
+| -    |  -   |    -    | -     |
+| image | string | null | link da imagem que sera mostrada como avatar |
+
+<Preview>
+  <Story
+    name='Com imagem'
+    args={{
+      image: "https://images.generated.photos/u9WhSmk-gb8bJYCdJhck-utL2AA3R4KIKcPI92VWnBw/rs:fit:256:256/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LnBob3Rvcy92M18w/MjE5NzI2LmpwZw.jpg"
+    }}
+  >
+    {Default.bind()}
+  </Story>
+</Preview>
+
+# Nome Abreviado
+
+| PROP | Type | Default | Descr |
+| -    |  -   |    -    | -     |
+| name | string | null | essa propriedade serve para que se a imagem não for renderizada ele mostra o nome abreviado
+
+<Preview>
+  <Story
+    name='Sem imagem'
+    args={{
+      name: 'Raul Melo'
+    }}
+    >
+    {Default.bind()}
+  </Story>
+</Preview>
+
+
+# Tamanhos Imagens
+
+| PROP | Type | Default | Descr |
+| -    |  -   |    -    | -     |
+| size  | 'sm', 'md', 'lg' | sm | Tamanhos já definidos para o componente
+<Preview>
+<Story name='Tamanhos Imagens'>{{
+  template: `
+    <div class="flex gap-lg gap-[18px] flex-wrap lg:flex-nowrap items-center justify-center mt-40">
+      <user-picture size="xs" image="https://images.generated.photos/hw-paJA3EGXcheuHbqCoKcHVfiiJGBVnkmkLlpUdmAE/rs:fit:512:512/wm:0.95:sowe:18:18:0.33/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LmNvbmQvYzA3NGE5/NGUtZWYwMy00Nzg2/LWI5ZmMtYTdhNzg5/MDU0M2QyLmpwZw.jpg" name="Raul Melo" profile="Asven"></user-picture>
+      <user-picture size="sm" image="https://images.generated.photos/0b2maYIw-iQtun_eG-1TwxAj2a0oow7Pd0t8tkMBaB0/rs:fit:512:512/wm:0.95:sowe:18:18:0.33/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LmNvbmQvNTgzOTNj/NWItNzQ2MC00Mzc0/LTliMzktZTczN2Zk/ZDJmYzExLmpwZw.jpg" name="Raul Melo" profile="Asven"></user-picture>
+      <user-picture size="md" image="https://images.generated.photos/JV9d4upY1SmmWHVkekx9ZCRab-VaiPZ0M27vWhTQz54/rs:fit:512:512/wm:0.95:sowe:18:18:0.33/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LmNvbmQvZmUzNjU0/MTYtNTI3Yi00YzM4/LTgzZmEtMTU1ZmNm/ZjkyMjI4LmpwZw.jpg" name="Raul Melo" profile="Asven"></user-picture>
+      <user-picture size="lg" image="https://images.generated.photos/A5wT0ZV3WpBu3J6EHtJ-JfauB1BdM29d0wCLheFaDQw/rs:fit:512:512/wm:0.95:sowe:18:18:0.33/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LmNvbmQvODBmMjll/YjUtNDg3Yi00ODQ5/LWE4M2ItNTcxODI5/YjRlMjYzLmpwZw.jpg" name="Raul Melo" profile="Asven"></user-picture>
+    </div>
+  `,
+}}</Story>
+</Preview>
+
